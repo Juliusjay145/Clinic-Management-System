@@ -13,7 +13,7 @@ class CreateTablePosts extends Migration
      */
     public function up()
     {
-        Schema::create('Posts', function (Blueprint $table){
+        Schema::create('posts', function (Blueprint $table){
           $table->increments('id');
           $table->string('symptoms');
           $table->string('firstname');
