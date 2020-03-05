@@ -54,9 +54,6 @@ class PostsController extends Controller
     //end of the line>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-    
-
-
 
     /**
      * Store a newly created resource in storage.

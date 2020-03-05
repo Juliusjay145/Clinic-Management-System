@@ -28,6 +28,13 @@ Route::get('/samplefolder', function () {
 
 // end of sample folder functions
 
+Route::get('/docsappointment', function () {
+    return view('medicines');
+});
+
+Route::get('/docsappointment', function () {
+    return view('calendartasks');
+});
 
 
 Route::get('/posts/main', 'PostsController@postsample');
@@ -39,6 +46,10 @@ Route::get('/posts/nextpage', 'PostsController@nextpls');
 Route::get('/samplefolder/sample', 'SampleController@postsamples');
 
 // end of sample routes
+
+Route::get('/docsappointment/medicines', 'SchedulesController@medicinesmethod');
+
+Route::get('/docsappointment/calendartasks', 'SchedulesController@tasksmethod');
 
 
 

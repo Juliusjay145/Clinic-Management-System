@@ -65,6 +65,19 @@
         Interface
       </div>
 
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url ('/docsappointment/calendartasks') }}">
+          <i class="fas fa-clipboard-list"></i>
+          <span>Tasks</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url ('/docsappointment/medicines') }}">
+          <i class="fas fa-pills"></i>
+          <span>Medicines</span></a>
+      </li>
+
+
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">

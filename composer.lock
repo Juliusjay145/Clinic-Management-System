@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf868e28a7319bb87222e744d3a1a872",
+    "content-hash": "466df957e24d6521ba76e887f8234fee",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -614,6 +614,53 @@
                 "storage"
             ],
             "time": "2020-02-05T18:14:17+00:00"
+        },
+        {
+            "name": "maddhatter/laravel-fullcalendar",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maddhatter/laravel-fullcalendar.git",
+                "reference": "6502ee3eee2d506d58fa37864af8f2003c9aaca1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maddhatter/laravel-fullcalendar/zipball/6502ee3eee2d506d58fa37864af8f2003c9aaca1",
+                "reference": "6502ee3eee2d506d58fa37864af8f2003c9aaca1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MaddHatter\\LaravelFullcalendar\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Calendar": "MaddHatter\\LaravelFullcalendar\\Facades\\Calendar"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "MaddHatter\\LaravelFullcalendar": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shawn Tunney",
+                    "email": "shawn.tunney@gmail.com"
+                }
+            ],
+            "description": "Laravel helper for FullCalendar.io",
+            "time": "2017-09-18T17:54:18+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3243,6 +3290,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-06-30T09:13:00+00:00"
         },
         {

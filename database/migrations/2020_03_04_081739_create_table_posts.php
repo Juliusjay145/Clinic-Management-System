@@ -18,7 +18,7 @@ class CreateTablePosts extends Migration
           $table->string('symptoms');
           $table->string('firstname');
           $table->string('lastname');
-          $table->string('profilepic');
+          $table->binary('profilepic');
           $table->string('gender');
           $table->string('bloodtype');
           $table->string('birthday');
