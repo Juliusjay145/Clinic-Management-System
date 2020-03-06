@@ -431,10 +431,8 @@
           $('.disable-example').prop('disabled',false);
           $('.disable-example').selectpicker('refresh');
       });
-
       // scrollYou
       $('.scrollMe .dropdown-menu').scrollyou();
-
       prettyPrint();
       };
     </script>
@@ -442,3 +440,6 @@
 </body>
 
 </html>
+© 2020 GitHub, Inc.
+Terms
+P

@@ -62,7 +62,7 @@
 
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <a href="{{ url('/docsappointment/calendartasks') }}" style="text-decoration:none">
+              <a href="{{ url('/doctors') }}" style="text-decoration:none">
               <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">

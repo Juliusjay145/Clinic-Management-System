@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Posts;
-class PostsController extends Controller
+use App\Doctors;
+class DoctorsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Posts::all();
-        return view('posts.index',compact('posts'));
+        $doctors = Doctors::all();
+        return view('doctors.index',compact('doctors'));
     }
 
     
@@ -26,7 +26,7 @@ class PostsController extends Controller
      */
  public function postsample()
  {
-    return view('posts.main');
+    return view('doctors.main');
 }
 
 
@@ -37,7 +37,7 @@ class PostsController extends Controller
      */
      public function create()
      {
-        return view('posts.create');
+        return view('doctors.create');
     }
 
 
@@ -48,7 +48,7 @@ class PostsController extends Controller
      */
       public function alapaap()
       {
-        return view('posts.main');
+        return view('doctors.main');
     }
 
     //end of the line>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -77,7 +77,7 @@ class PostsController extends Controller
           
 
       ]);
-        Posts::create([
+      Doctors::create([
             'symptoms'=>$request->symptoms,
             'firstname'=>$request->firstname,
             'lastname'=>$request->lastname,
@@ -89,7 +89,7 @@ class PostsController extends Controller
             'addr'=>$request->addr,
             'contactnum'=>$request->contactnum
         ]);
-        return redirect()->route('posts.index')->with('success','Post created success');
+        return redirect()->route('doctors.index')->with('success','Post created success');
     }
 
     /**
@@ -100,8 +100,8 @@ class PostsController extends Controller
      */
    public function show($id)
     {
-      $post = Posts::find($id);
-      return view('posts.show',compact('post'));
+      $doctor = Doctors::find($id);
+      return view('doctors.show',compact('doctor'));
     }
 
     /**
@@ -112,8 +112,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Posts::find($id);
-        return view('posts.edit',compact('post'));
+        $doctor = Doctors::find($id);
+        return view('doctors.edit',compact('doctors'));
     }
 
     /**
@@ -137,7 +137,7 @@ class PostsController extends Controller
           'addr'=>'required',
           'contactnum'=>'required',
       ]);
-        Posts::find($id)->update
+      Doctors::find($id)->update
         (['symptoms'=>$request->symptoms,
             'firstname'=>$request->firstname,
             'lastname'=>$request->lastname,
@@ -148,7 +148,7 @@ class PostsController extends Controller
             'age'=>$request->age,
             'addr'=>$request->addr,
             'contactnum'=>$request->contactnum]);
-        return redirect()->route('posts.index')->with('success','Post update success');
+        return redirect()->route('doctors.index')->with('success','Post update success');
     }
 
     /**
@@ -161,13 +161,13 @@ class PostsController extends Controller
     
     public function destroy($id)
     {
-        Posts::find($id)->delete();
-        return redirect()->route('posts.index')->with('success','Post deleted success');
+        Doctors::find($id)->delete();
+        return redirect()->route('doctors.index')->with('success','Post deleted success');
     }
 
     public function getBloodtypes()
     {
         $bloodtype = DB::table('bloodtype')->pluck("firstname","id");
-        return view('posts.create',compact('bloodtype'));
+        return view('doctors.create',compact('bloodtype'));
     }
 }

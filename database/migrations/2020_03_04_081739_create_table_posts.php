@@ -18,7 +18,7 @@ class CreateTablePosts extends Migration
           $table->string('symptoms');
           $table->string('firstname');
           $table->string('lastname');
-          $table->binary('profilepic');
+          $table->string('profilepic');
           $table->string('gender');
           $table->string('bloodtype');
           $table->string('birthday');
@@ -38,6 +38,6 @@ class CreateTablePosts extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Posts');
+        Schema::dropIfExists('posts');
     }
 }

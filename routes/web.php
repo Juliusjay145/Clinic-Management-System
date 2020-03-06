@@ -20,6 +20,9 @@ Route::get('/posts', function () {
     return view('posts.index');
 });
 
+Route::get('/doctors', function () {
+    return view('doctors.index');
+});
 //sample folder functions
 
 Route::get('/samplefolder', function () {
@@ -47,9 +50,9 @@ Route::get('/samplefolder/sample', 'SampleController@postsamples');
 
 // end of sample routes
 
-Route::get('/docsappointment/medicines', 'SchedulesController@medicinesmethod');
+Route::get('/doctors/medicines', 'DoctorsController@medmethod');
 
-Route::get('/docsappointment/calendartasks', 'SchedulesController@tasksmethod');
+Route::get('/doctors/docdashboard', 'DoctorsController@docsmethod');
 
 
 
@@ -58,6 +61,31 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('posts','PostsController');
+
+Route::resource('doctors','DoctorsController');
+
+// Route::post('/login/custom',[
+
+// 	'uses'	=>	 'LoginController@login',
+// 	'as'	=>	 'login.custom'
+
+// ]);
+
+// Route::group(['middleware' => 'auth'], function(){
+
+// 	Route::get('/home', function(){
+
+// 		return view('home');
+
+// 	})->name('home');
+
+// 	Route::get('/dashboard', function(){
+
+// 		return view('dashboard');
+
+// 	})->name('dashboard');
+
+// });
 
 
 
