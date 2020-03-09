@@ -22,15 +22,6 @@ class DoctorsController extends Controller
  /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
-     */
- public function postsample()
- {
-    return view('doctors.main');
-}
-
-
-     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -40,16 +31,6 @@ class DoctorsController extends Controller
         return view('doctors.create');
     }
 
-
-      /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-      public function alapaap()
-      {
-        return view('doctors.main');
-    }
 
     //end of the line>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -64,12 +45,12 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-          'symptoms'=>'required|string|max:255'
+          'symptoms'=>'required|string|max:255',
       ]);
-      Doctors::create([
+        Doctors::create([
             'symptoms'=>$request->symptoms
         ]);
-        return redirect()->route('doctors.index')->with('success','Post created success');
+        return redirect()->route('doctors.index')->with('success','Doctor created success');
     }
 
     /**
@@ -90,10 +71,10 @@ class DoctorsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($doctors_id)
     {
-        $doctor = Doctors::find($id);
-        return view('doctors.edit',compact('doctors'));
+        $doctor = Doctors::find($doctors_id);
+        return view('doctors.edit',compact('doctor'));
     }
 
     /**
@@ -103,14 +84,14 @@ class DoctorsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $doctors_id)
     {
         $this->validate($request,[
           'symptoms' => 'required',
       ]);
-      Doctors::find($id)->update
+      Doctors::find($doctors_id)->update
         (['symptoms'=>$request->symptoms]);
-        return redirect()->route('doctors.index')->with('success','Post update success');
+        return redirect()->route('doctors.index')->with('success','Doctor update success');
     }
 
     /**
@@ -121,15 +102,15 @@ class DoctorsController extends Controller
      */
 
     
-    public function destroy($id)
+    public function destroy($doctors_id)
     {
-        Doctors::find($id)->delete();
-        return redirect()->route('doctors.index')->with('success','Post deleted success');
+        Doctors::find($doctors_id)->delete();
+        return redirect()->route('doctors.index')->with('success','Doctor deleted success');
     }
 
     public function getBloodtypes()
     {
         $bloodtype = DB::table('bloodtype')->pluck("firstname","id");
-        return view('doctors.create',compact('bloodtype'));
+        return view('posts.create',compact('bloodtype'));
     }
 }

@@ -34,13 +34,13 @@
         <td>{{$no++}}</td>
         <td>{{ $doctor->symptoms }}</td>
         <td>
-          <a class="button teal" style="width: 100px" href="{{route('doctors.show',$doctor->id)}}">
+          <a class="button teal" style="width: 100px" href="{{route('doctors.show',$doctor->doctors_id)}}">
               <i class="far fa-eye"> View</i>
           </a>
-          <a class="button rss" style="width: 100px;" href="{{route('doctors.edit',$doctor->id)}}">
+          <a class="button rss" style="width: 100px;" href="{{route('doctors.edit',$doctor->doctors_id)}}">
               <i class="fas fa-edit"> Edit</i>
           </a>
-            {!! Form::open(['method' => 'DELETE','route' => ['doctors.destroy', $doctor->id],'style'=>'display:inline']) !!}
+            {!! Form::open(['method' => 'DELETE','route' => ['doctors.destroy', $doctor->doctors_id],'style'=>'display:inline']) !!}
               <button type="submit" style="display: inline; width: 100px" class="button btn dsgnmoo">
                 <i class="fas fa-trash" style="font-size: 13px"> Delete</i>
               </button> 

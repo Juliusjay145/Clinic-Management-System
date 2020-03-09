@@ -27,6 +27,14 @@
                 </div>
 
 
+              
+
+            </div>
+
+            <!-- Border Bottom Utilities -->
+            <div class="col-lg-6">
+
+
               <div class="card mb-4 py-3 border-bottom-warning">
                 <div class="card-body">
                   <strong>Symptom Cases: </strong>
@@ -34,6 +42,7 @@
                 </div>
               </div>
 
+              
               
 
             </div>

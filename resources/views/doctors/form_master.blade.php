@@ -38,8 +38,6 @@ button.button.green:active {
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
 
-
-
               <div class="row" >
                  <div class="col-sm-2">
                     {!! form::label('symptoms','Symptoms Case') !!}
@@ -52,12 +50,12 @@ button.button.green:active {
                 </div>
               </div>
 
-
-
               <button type="submit" class="button green form-control w3-right"><i class="fas fa-save"> Save</i></button>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
     </div>
   </div>
 </div>

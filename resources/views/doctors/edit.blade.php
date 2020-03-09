@@ -3,7 +3,7 @@
 <div id="page-wrapper" style="background: white">
 
     <div>
-      {{ Form::model($doctor,['route'=>['doctors.update',$doctor->id],'method'=>'PATCH', 'files' => true]) }}
+      {{ Form::model($doctor,['route'=>['doctors.update',$doctor->doctors_id],'method'=>'PATCH', 'files' => true]) }}
       @include('doctors.form_master')
       {{ Form::close() }}
     </div>
