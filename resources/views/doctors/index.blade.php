@@ -4,7 +4,7 @@
   <div class="row">
   <div class="col-sm-12">
     <div class="full-right">
-      <h2 style="margin-left: 20px">Over All Doctors</h2>
+      <h2 style="margin-left: 20px">Over All Patients</h2>
     </div>
   </div>
   </div>
@@ -24,7 +24,7 @@
       <!-- <th>Contact Number</th> -->
       <th with="140px" class="text-center">
         <a href="{{route('doctors.create')}}" class="button green" style=" margin-bottom: 1px">
-          <i class="fas fa-plus-square" style="width: 90px;"> Register Doctors</i>
+          <i class="fas fa-plus-square" style="width: 90px;"> Add Patient</i>
         </a>
       </th>
     </tr>

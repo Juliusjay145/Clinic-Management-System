@@ -64,30 +64,10 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-          'symptoms'=>'required|string|max:255',
-          'firstname'=>'required',
-          'lastname'=>'required',
-          'profilepic'=>'required',
-          'gender'=>'required',
-          'bloodtype'=>'required',
-          'birthday'=>'required',
-          'age'=>'required',
-          'addr'=>'required',
-          'contactnum'=>'required',
-          
-
+          'symptoms'=>'required|string|max:255'
       ]);
       Doctors::create([
-            'symptoms'=>$request->symptoms,
-            'firstname'=>$request->firstname,
-            'lastname'=>$request->lastname,
-            'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
-            'gender'=>$request->gender,
-            'bloodtype'=>$request->bloodtype,
-            'birthday'=>$request->birthday,
-            'age'=>$request->age,
-            'addr'=>$request->addr,
-            'contactnum'=>$request->contactnum
+            'symptoms'=>$request->symptoms
         ]);
         return redirect()->route('doctors.index')->with('success','Post created success');
     }
@@ -127,27 +107,9 @@ class DoctorsController extends Controller
     {
         $this->validate($request,[
           'symptoms' => 'required',
-          'firstname'=>'required',
-          'lastname'=>'required',
-          'profilepic'=>'required',
-          'gender'=>'required',
-          'bloodtype'=>'required',
-          'birthday'=>'required',
-          'age'=>'required',
-          'addr'=>'required',
-          'contactnum'=>'required',
       ]);
       Doctors::find($id)->update
-        (['symptoms'=>$request->symptoms,
-            'firstname'=>$request->firstname,
-            'lastname'=>$request->lastname,
-            'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
-            'gender'=>$request->gender,
-            'bloodtype'=>$request->bloodtype,
-            'birthday'=>$request->birthday,
-            'age'=>$request->age,
-            'addr'=>$request->addr,
-            'contactnum'=>$request->contactnum]);
+        (['symptoms'=>$request->symptoms]);
         return redirect()->route('doctors.index')->with('success','Post update success');
     }
 

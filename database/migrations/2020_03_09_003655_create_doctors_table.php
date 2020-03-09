@@ -13,8 +13,10 @@ class CreateDoctorsTable extends Migration
      */
     public function up()
     {
-        Schema::table('doctors', function (Blueprint $table) {
-            //
+        Schema::create('doctors', function (Blueprint $table){
+        $table->increments('doctors_id');
+          $table->string('symptoms');
+          $table->timestamps();
         });
     }
 
@@ -25,8 +27,7 @@ class CreateDoctorsTable extends Migration
      */
     public function down()
     {
-        Schema::table('doctors', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('doctors');
+        
     }
 }

@@ -26,14 +26,16 @@
                     </div>
                 </div>
 
+
               <div class="card mb-4 py-3 border-bottom-warning">
                 <div class="card-body">
                   <strong>Symptom Cases: </strong>
-                        {{ $doctors->symptoms}}
+                        {{ $doctor->symptoms}}
                 </div>
               </div>
 
               
+
             </div>
 
           </div>

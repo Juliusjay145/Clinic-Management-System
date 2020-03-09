@@ -25,8 +25,6 @@ class CreateTablePosts extends Migration
           $table->string('age');
           $table->string('addr');
           $table->string('contactnum');
-
-          
           $table->timestamps();
         });
     }

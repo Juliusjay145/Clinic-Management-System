@@ -3,7 +3,7 @@
 <div id="page-wrapper" style="background: white; margin-top: 10px">
 
     <div>
-      {{ Form::open(['route'=>'doctors.store', 'method'=>'DOCTOR', 'files' => true]) }}
+      {{ Form::open(['route'=>'doctors.store', 'method'=>'POST', 'files' => true]) }}
         @include('doctors.form_master')
       {{ form::close() }}
     </div>
