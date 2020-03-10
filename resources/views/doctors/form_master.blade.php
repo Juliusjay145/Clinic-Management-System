@@ -10,7 +10,7 @@
     box-shadow: inset 0 0 0 1px #e0eeb6;
     color: #5d7731;
     text-shadow: 0 1px 0 #d0e5a4; }
-    
+
 button.button.green:hover {
     background: #abd164;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#abd164), to(#b9d972));
@@ -19,7 +19,7 @@ button.button.green:hover {
     border: solid 1px #98b85b;
     border-bottom: solid 3px #799545;
     box-shadow: inset 0 0 0 1px #cce3a1; }
-    
+
 button.button.green:active {
     background: #a4cb5d;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a4cb5d), to(#9ec45a));
@@ -28,18 +28,19 @@ button.button.green:active {
     border: solid 1px #6e883f;
     box-shadow: inset 0 10px 15px 0 #90b352; }
 </style>
-<div class="container-fluid"  style="margin-top: 10px">
+<div class="container-fluid" style="margin-top: 20px; margin-bottom: 2px">
 
  <h1 class="h3 mb-1 text-gray-900">Patient Form</h1>
 
-          <!-- Content Row -->
-          <div class="row" >
 
-            <!-- Border Left Utilities -->
-            <div class="col-lg-6" style="margin-top: 20px">
 
-              <div class="row" >
-                 <div class="col-sm-2">
+ <div class="row" >
+<!-- Border Left Utilities -->
+<div class="col-lg-6" style="margin-top: 20px">
+
+
+<div class="row" >
+              <div class="col-sm-2">
                     {!! form::label('lastname','Last Name') !!}
                   </div>
                 <div class="col-sm-10">
@@ -85,8 +86,12 @@ button.button.green:active {
                   </div>
                 </div>
               </div>
+</div>
 
-              <div class="row" >
+<!-- Border Bottom Utilities -->
+<div class="col-lg-6" style="margin-top: 20px">
+
+<div class="row" >
                  <div class="col-sm-2">
                     {!! form::label('address','Address') !!}
                   </div>
@@ -110,32 +115,40 @@ button.button.green:active {
                 </div>
               </div>
 
-              <div class="row" >
-                 <div class="col-sm-2">
-                    {!! form::label('docs_username','Username') !!}
+            
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <center>
+                    <div class="col-sm-2" style="margin-left: -80%">
+                      <b>
+                        {!! form::label('docs_username','Username') !!}
+                      </b>  
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="form-group {{ $errors->has('docs_username') ? 'has-error' : "" }}" style="color: red">
+                        {{ Form::text('docs_username',NULL, ['class'=>'form-control', 'id'=>'docs_username', 'placeholder'=>'Username...']) }}
+                        {{ $errors->first('docs_username') }}
+                      </div>
+                    </div>
+                
+                    <div class="col-sm-2" style="margin-left: -80%">
+                      <b>
+                        {!! form::label('docs_password','Password') !!}
+                      </b>  
+                    </div>
+                    <div class="col-sm-10">
+                      <div class="form-group {{ $errors->has('docs_password') ? 'has-error' : "" }}" style="color: red">
+                        {{ Form::text('docs_password',NULL, ['class'=>'form-control', 'id'=>'docs_password', 'placeholder'=>'Password...']) }}
+                        {{ $errors->first('docs_username') }}
+                      </div>
+                    </div>
+                    </center>
                   </div>
-                <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('docs_username') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('docs_username',NULL, ['class'=>'form-control', 'id'=>'docs_username', 'placeholder'=>'Username...']) }}
-                    {{ $errors->first('docs_username') }}
+                  <button type="submit" style="margin-bottom: 20px" class="button green form-control w3-right"><i class="fas fa-save"> Save</i></button>
                   </div>
-                </div>
               </div>
 
-              <div class="row" >
-                 <div class="col-sm-2">
-                    {!! form::label('docs_password','Password') !!}
-                  </div>
-                <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('docs_password') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('docs_password',NULL, ['class'=>'form-control', 'id'=>'docs_password', 'placeholder'=>'Password...']) }}
-                    {{ $errors->first('docs_username') }}
-                  </div>
-                </div>
-              </div>
-
-              <button type="submit" class="button green form-control w3-right"><i class="fas fa-save"> Save</i></button>
-
+  
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 

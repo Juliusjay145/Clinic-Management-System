@@ -56,7 +56,7 @@
               <i class="fas fa-edit"> Edit</i>
           </a>
             {!! Form::open(['method' => 'DELETE','route' => ['doctors.destroy', $doctor->doctors_id],'style'=>'display:inline']) !!}
-              <button type="submit" style="display: inline; width: 100px" class="button btn dsgnmoo">
+              <button type="submit" style="display: inline; width: 100px;" class="button btn dsgnmoo">
                 <i class="fas fa-trash" style="font-size: 13px"> Delete</i>
               </button> 
             {!! Form::close() !!}

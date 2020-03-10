@@ -10,7 +10,7 @@
     box-shadow: inset 0 0 0 1px #e0eeb6;
     color: #5d7731;
     text-shadow: 0 1px 0 #d0e5a4; }
-    
+
 button.button.green:hover {
     background: #abd164;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#abd164), to(#b9d972));
@@ -19,7 +19,7 @@ button.button.green:hover {
     border: solid 1px #98b85b;
     border-bottom: solid 3px #799545;
     box-shadow: inset 0 0 0 1px #cce3a1; }
-    
+
 button.button.green:active {
     background: #a4cb5d;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a4cb5d), to(#9ec45a));
@@ -79,16 +79,16 @@ button.button.green:active {
               </div>
 
 
-              <div class="row"> 
-                <div class="col-sm-2"> {!!form::label('bosy','Prof') !!} </div>       
+              <div class="row">
+                <div class="col-sm-2"> {!!form::label('bosy','Prof') !!} </div>
                   <div class="col-sm-10">
                     <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
                       red"> {{ $errors->first('profilepic') }} <!-- <input type="file"
                       id="avatar" name="profilepic" accept="image/png, image/jpeg">
-                      --> 
+                      -->
                             <h6 style="color: black"> {!!
                               Form::file('profilepic') !!}
-                           </h6>  
+                           </h6>
                    </div>
                 </div>
               </div>
@@ -156,7 +156,7 @@ button.button.green:active {
                           <b for="AB-" >AB-</b>
                         </option>
 
-                        
+
                       </select>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ button.button.green:active {
 
 <script>
   // the selector will match all input controls of type :checkbox
-// and attach a click event handler 
+// and attach a click event handler
 $("input:checkbox").on('click', function() {
   // in the handler, 'this' refers to the box clicked on
   var $box = $(this);

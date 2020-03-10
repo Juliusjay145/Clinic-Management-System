@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2 style="margin-left: 10px"> Show Patients Profile</h2>
+            <h2 style="margin-left: 10px"> Doctors Profile</h2>
         </div>
         <div class="pull-right">
             <br/>
@@ -13,69 +13,51 @@
         </div>
     </div>
 </div>
-<div class="container-fluid"><br>
+
+
+<div class="container-fluid">
           <!-- Content Row -->
           <div class="row">
 
             <!-- Border Left Utilities -->
             <div class="col-lg-6">
 
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        
-                    </div>
+              <div class="card mb-4 py-3 border-bottom-success">
+                <div class="card-body">
+                  <strong>Lastname: </strong>
+                        {{ $doctor->lastname}}
                 </div>
 
+                <div class="card-body">
+                  <strong>Firstname: </strong>
+                        {{ $doctor->firstname}}
+                </div>
 
-              
+                <div class="card-body">
+                  <strong>Phone no.: </strong>
+                        {{ $doctor->phone_no}}
+                </div>
+
+                <div class="card-body">
+                  <strong>Age: </strong>
+                        {{ $doctor->age}}
+                </div>
+
+                <div class="card-body">
+                  <strong>Address: </strong>
+                        {{ $doctor->address}}
+                </div>
+
+                <div class="card-body">
+                  <strong>State: </strong>
+                        {{ $doctor->state}}
+                </div>
+              </div>   
 
             </div>
 
             <!-- Border Bottom Utilities -->
             <div class="col-lg-6">
-
-
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>Lastname: </strong>
-                        {{ $doctor->lastname}}
-                </div>
-              </div>
-
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>Firstname: </strong>
-                        {{ $doctor->firstname}}
-                </div>
-              </div>
-
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>Phone no.: </strong>
-                        {{ $doctor->phone_no}}
-                </div>
-              </div>
-
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>Age: </strong>
-                        {{ $doctor->age}}
-                </div>
-              </div>
-
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>Address: </strong>
-                        {{ $doctor->address}}
-                </div>
-              </div>
-
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>State: </strong>
-                        {{ $doctor->state}}
-                </div>
-              </div>
 
               <div class="card mb-4 py-3 border-bottom-warning">
                 <div class="card-body">
@@ -91,14 +73,10 @@
                 </div>
               </div>
 
-              
-
-              
-              
-
             </div>
 
           </div>
 
-        </div>
+
+</div>
 @endsection
