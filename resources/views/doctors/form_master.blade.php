@@ -40,12 +40,96 @@ button.button.green:active {
 
               <div class="row" >
                  <div class="col-sm-2">
-                    {!! form::label('symptoms','Symptoms Case') !!}
+                    {!! form::label('lastname','Last Name') !!}
                   </div>
                 <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('symptoms') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('symptoms',NULL, ['class'=>'form-control', 'id'=>'symptoms', 'placeholder'=>'Symptoms Cases...']) }}
-                    {{ $errors->first('symptoms') }}
+                  <div class="form-group {{ $errors->has('lastname') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('lastname',NULL, ['class'=>'form-control', 'id'=>'lastname', 'placeholder'=>'Last Name...']) }}
+                    {{ $errors->first('lastname') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('firstname','First Name') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('firstname') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('firstname',NULL, ['class'=>'form-control', 'id'=>'firstname', 'placeholder'=>'First Name...']) }}
+                    {{ $errors->first('firstname') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('phone_no','Phone No.') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('phone_no') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('phone_no',NULL, ['class'=>'form-control', 'id'=>'phone_no', 'placeholder'=>'Phone No...']) }}
+                    {{ $errors->first('phone_no') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('age','Age') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('age') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('age',NULL, ['class'=>'form-control', 'id'=>'age', 'placeholder'=>'Age...']) }}
+                    {{ $errors->first('age') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('address','Address') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('address') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('address',NULL, ['class'=>'form-control', 'id'=>'address', 'placeholder'=>'Address...']) }}
+                    {{ $errors->first('address') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('state','State') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('state') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('state',NULL, ['class'=>'form-control', 'id'=>'state', 'placeholder'=>'State...']) }}
+                    {{ $errors->first('state') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('docs_username','Username') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('docs_username') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('docs_username',NULL, ['class'=>'form-control', 'id'=>'docs_username', 'placeholder'=>'Username...']) }}
+                    {{ $errors->first('docs_username') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" >
+                 <div class="col-sm-2">
+                    {!! form::label('docs_password','Password') !!}
+                  </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('docs_password') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('docs_password',NULL, ['class'=>'form-control', 'id'=>'docs_password', 'placeholder'=>'Password...']) }}
+                    {{ $errors->first('docs_username') }}
                   </div>
                 </div>
               </div>

@@ -20,7 +20,15 @@
      <thead class="thead-dark">
     <tr>
       <th with="80px" scope="row">No</th>
-      <th scope="col">Symptoms</th>
+      <th scope="col">Lastname</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Phone No.</th>
+      <th scope="col">Age</th>
+      <th scope="col">Address</th>
+      <th scope="col">State</th>
+      <th scope="col">Doctors Username</th>
+      <th scope="col">Doctors Password</th>
+
       <!-- <th>Contact Number</th> -->
       <th with="140px" class="text-center">
         <a href="{{route('doctors.create')}}" class="button green" style=" margin-bottom: 1px">
@@ -32,7 +40,14 @@
     @foreach ($doctors as $doctor)
       <tr>
         <td>{{$no++}}</td>
-        <td>{{ $doctor->symptoms }}</td>
+        <td>{{ $doctor->lastname }}</td>
+        <td>{{ $doctor->firstname }}</td>
+        <td>{{ $doctor->phone_no }}</td>
+        <td>{{ $doctor->age }}</td>
+        <td>{{ $doctor->address }}</td>
+        <td>{{ $doctor->state }}</td>
+        <td>{{ $doctor->docs_username }}</td>
+        <td>{{ $doctor->docs_password }}</td>
         <td>
           <a class="button teal" style="width: 100px" href="{{route('doctors.show',$doctor->doctors_id)}}">
               <i class="far fa-eye"> View</i>

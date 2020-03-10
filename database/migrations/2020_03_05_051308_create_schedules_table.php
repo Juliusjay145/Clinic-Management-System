@@ -19,8 +19,8 @@ class CreateSchedulesTable extends Migration
             $table->integer('post_id')->unsigned();
             //end of the line
 
-            $table->integer('doctor_id')->unsigned();
-            $table->integer('patient_id')->unsigned();
+            // $table->integer('doctor_id')->unsigned();
+            // $table->integer('patient_id')->unsigned();
 
             //ari pag add og datas
             $table->string('sched_name');
@@ -32,13 +32,14 @@ class CreateSchedulesTable extends Migration
             // ari na tawgon ang FK na gerename og post_id sa id sa table na posts
             $table->foreign('post_id')->references('id')->on('posts');
 
-            $table->foreign('doctor_id')
-                ->references('id')
-                ->on('doctors');
+            // $table->foreign('doctor_id')
+            //     ->references('id')
+            //     ->on('doctors');
 
-            $table->foreign('patient_id')
-                ->references('id')
-                ->on('patients');
+            // $table->foreign('patient_id')
+            //     ->references('id')
+            //     ->on('patients');
+            
             // end of the line
         });
      }

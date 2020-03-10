@@ -37,10 +37,61 @@
 
               <div class="card mb-4 py-3 border-bottom-warning">
                 <div class="card-body">
-                  <strong>Symptom Cases: </strong>
-                        {{ $doctor->symptoms}}
+                  <strong>Lastname: </strong>
+                        {{ $doctor->lastname}}
                 </div>
               </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>Firstname: </strong>
+                        {{ $doctor->firstname}}
+                </div>
+              </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>Phone no.: </strong>
+                        {{ $doctor->phone_no}}
+                </div>
+              </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>Age: </strong>
+                        {{ $doctor->age}}
+                </div>
+              </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>Address: </strong>
+                        {{ $doctor->address}}
+                </div>
+              </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>State: </strong>
+                        {{ $doctor->state}}
+                </div>
+              </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>Doctors Username: </strong>
+                        {{ $doctor->docs_username}}
+                </div>
+              </div>
+
+              <div class="card mb-4 py-3 border-bottom-warning">
+                <div class="card-body">
+                  <strong>Doctors Password: </strong>
+                        {{ $doctor->docs_password}}
+                </div>
+              </div>
+
+              
 
               
               

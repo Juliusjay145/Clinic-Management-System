@@ -45,10 +45,26 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-          'symptoms'=>'required|string|max:255',
+          'lastname'=>'required',
+          'firstname'=>'required',
+          'phone_no'=>'required',
+          'age'=>'required',
+          'address'=>'required',
+          'state'=>'required',
+          'docs_username'=>'required',
+          'docs_password'=>'required',
+
       ]);
         Doctors::create([
-            'symptoms'=>$request->symptoms
+            'lastname'=>$request->lastname,
+            'firstname'=>$request->firstname,
+            'phone_no'=>$request->phone_no,
+            'age'=>$request->address,
+            'address'=>$request->address,
+            'state'=>$request->state,
+            'docs_username'=>$request->docs_username,
+            'docs_password'=>$request->docs_password,
+
         ]);
         return redirect()->route('doctors.index')->with('success','Doctor created success');
     }
@@ -87,10 +103,26 @@ class DoctorsController extends Controller
     public function update(Request $request, $doctors_id)
     {
         $this->validate($request,[
-          'symptoms' => 'required',
+          'lastname' => 'required',
+          'firstname'=>'required',
+          'phone_no'=>'required',
+          'age'=>'required',
+          'address'=>'required',
+          'state'=>'required',
+          'docs_username'=>'required',
+          'docs_password'=>'required',
       ]);
       Doctors::find($doctors_id)->update
-        (['symptoms'=>$request->symptoms]);
+        (['lastname'=>$request->lastname,
+            'firstname'=>$request->firstname,
+            'phone_no'=>$request->phone_no,
+            'age'=>$request->address,
+            'address'=>$request->address,
+            'state'=>$request->state,
+            'docs_username'=>$request->docs_username,
+            'docs_password'=>$request->docs_password
+        
+        ]);
         return redirect()->route('doctors.index')->with('success','Doctor update success');
     }
 
