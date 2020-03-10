@@ -52,6 +52,13 @@
                   <strong>State: </strong>
                         {{ $doctor->state}}
                 </div>
+
+                <div class="card-body">
+                  <strong>Profile Picture : </strong>
+                  <center>
+                    <img style="width: auto; height: 100px; margin-top: 10px" src="data:image/jpeg;base64, {{ $doctor->profilepic }}" />
+                    </center>
+                </div>
               </div>   
 
             </div>

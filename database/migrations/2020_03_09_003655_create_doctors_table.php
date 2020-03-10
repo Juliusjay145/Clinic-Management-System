@@ -17,6 +17,7 @@ class CreateDoctorsTable extends Migration
         $table->increments('doctors_id');
           $table->string('lastname');
           $table->string('firstname');
+          $table->string('profilepic');
           $table->string('phone_no');
           $table->string('age');
           $table->string('address');

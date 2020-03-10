@@ -22,6 +22,7 @@
       <th with="80px" scope="row">No</th>
       <th scope="col">Lastname</th>
       <th scope="col">Firstname</th>
+      <th scope="col">Profile Picture</th>
       <th scope="col">Phone No.</th>
       <th scope="col">Age</th>
       <th scope="col">Address</th>
@@ -42,6 +43,7 @@
         <td>{{$no++}}</td>
         <td>{{ $doctor->lastname }}</td>
         <td>{{ $doctor->firstname }}</td>
+        <td><img style="width: auto; height: 100px;" src="data:image/jpeg;base64, {{ $doctor->profilepic }}" /></td>
         <td>{{ $doctor->phone_no }}</td>
         <td>{{ $doctor->age }}</td>
         <td>{{ $doctor->address }}</td>

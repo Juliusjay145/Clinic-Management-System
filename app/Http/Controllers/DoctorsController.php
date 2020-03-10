@@ -47,6 +47,7 @@ class DoctorsController extends Controller
         $this->validate($request,[
           'lastname'=>'required',
           'firstname'=>'required',
+          'profilepic'=>'required',
           'phone_no'=>'required',
           'age'=>'required',
           'address'=>'required',
@@ -58,6 +59,7 @@ class DoctorsController extends Controller
         Doctors::create([
             'lastname'=>$request->lastname,
             'firstname'=>$request->firstname,
+            'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
             'phone_no'=>$request->phone_no,
             'age'=>$request->address,
             'address'=>$request->address,
@@ -105,6 +107,7 @@ class DoctorsController extends Controller
         $this->validate($request,[
           'lastname' => 'required',
           'firstname'=>'required',
+          'profilepic'=>'required',
           'phone_no'=>'required',
           'age'=>'required',
           'address'=>'required',
@@ -115,6 +118,7 @@ class DoctorsController extends Controller
       Doctors::find($doctors_id)->update
         (['lastname'=>$request->lastname,
             'firstname'=>$request->firstname,
+            'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
             'phone_no'=>$request->phone_no,
             'age'=>$request->address,
             'address'=>$request->address,

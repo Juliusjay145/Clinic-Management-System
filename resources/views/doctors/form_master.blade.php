@@ -86,6 +86,20 @@ button.button.green:active {
                   </div>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-sm-2"> {!!form::label('bosy','Profile Picture') !!} </div>
+                  <div class="col-sm-10">
+                    <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
+                      red"> {{ $errors->first('profilepic') }} <!-- <input type="file"
+                      id="avatar" name="profilepic" accept="image/png, image/jpeg">
+                      -->
+                            <h6 style="color: black"> {!!
+                              Form::file('profilepic') !!}
+                          </h6>
+                  </div>
+                </div>
+              </div>
 </div>
 
 <!-- Border Bottom Utilities -->
