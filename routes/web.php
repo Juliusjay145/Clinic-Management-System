@@ -23,6 +23,10 @@ Route::get('/posts', function () {
 Route::get('/doctors', function () {
     return view('doctors.index');
 });
+
+Route::get('/patients', function () {
+    return view('patients.index');
+});
 //sample folder functions
 
 Route::get('/samplefolder', function () {
@@ -63,6 +67,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('posts','PostsController');
 
 Route::resource('doctors','DoctorsController');
+
+Route::resource('patients','PatientsController');
 
 // Route::post('/login/custom',[
 
