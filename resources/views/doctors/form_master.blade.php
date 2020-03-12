@@ -41,24 +41,24 @@ button.button.green:active {
 
 <div class="row" >
               <div class="col-sm-2">
-                    {!! form::label('lastname','Last Name') !!}
+                    {!! form::label('last_name','Last Name') !!}
                   </div>
                 <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('lastname') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('lastname',NULL, ['class'=>'form-control', 'id'=>'lastname', 'placeholder'=>'Last Name...']) }}
-                    {{ $errors->first('lastname') }}
+                  <div class="form-group {{ $errors->has('last_name') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('last_name',NULL, ['class'=>'form-control', 'id'=>'last_name', 'placeholder'=>'Last Name...']) }}
+                    {{ $errors->first('last_name') }}
                   </div>
                 </div>
               </div>
 
               <div class="row" >
                  <div class="col-sm-2">
-                    {!! form::label('firstname','First Name') !!}
+                    {!! form::label('first_name','First Name') !!}
                   </div>
                 <div class="col-sm-10">
                   <div class="form-group {{ $errors->has('firstname') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('firstname',NULL, ['class'=>'form-control', 'id'=>'firstname', 'placeholder'=>'First Name...']) }}
-                    {{ $errors->first('firstname') }}
+                    {{ Form::text('first_name',NULL, ['class'=>'form-control', 'id'=>'first_name', 'placeholder'=>'First Name...']) }}
+                    {{ $errors->first('first_name') }}
                   </div>
                 </div>
               </div>

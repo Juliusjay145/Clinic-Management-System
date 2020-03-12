@@ -25,12 +25,12 @@
               <div class="card mb-4 py-3 border-bottom-success">
                 <div class="card-body">
                   <strong>Lastname: </strong>
-                        {{ $doctor->lastname}}
+                        {{ $doctor->last_name}}
                 </div>
 
                 <div class="card-body">
                   <strong>Firstname: </strong>
-                        {{ $doctor->firstname}}
+                        {{ $doctor->first_name}}
                 </div>
 
                 <div class="card-body">
@@ -56,7 +56,7 @@
                 <div class="card-body">
                   <strong>Profile Picture : </strong>
                   <center>
-                    <img style="width: auto; height: 100px; margin-top: 10px" src="data:image/jpeg;base64, {{ $doctor->profilepic }}" />
+                    <img style="width: auto; height: 100px; margin-top: 10px" src="data:image/jpeg;base64, {{ $doctor->profile_pic }}" />
                     </center>
                 </div>
               </div>   

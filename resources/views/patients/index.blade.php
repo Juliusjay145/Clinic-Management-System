@@ -16,9 +16,9 @@
   @endif
 <center>
 <div style="overflow-x:auto;">
-  <table class="table">
+  <table class="table table-striped" style="margin: 10px">
      <thead class="thead-dark">
-    <tr>
+    <tr style="color: #235CC6">
       <th with="80px" scope="row">No</th>
       <th scope="col">Doctor</th>
       <th scope="col">Symptoms</th>

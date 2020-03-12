@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -64,34 +66,41 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/login/custom', [
+    'uses' => 'LoginController@login',
+    'as' => 'login.custom'
+    ]);
+
 Route::resource('posts','PostsController');
 
 Route::resource('doctors','DoctorsController');
 
 Route::resource('patients','PatientsController');
 
-// Route::post('/login/custom',[
+// Route::post('/login',[
 
 // 	'uses'	=>	 'LoginController@login',
-// 	'as'	=>	 'login.custom'
+// 	'as'	=>	 'login'
 
 // ]);
 
-// Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => 'auth'], function(){
 
-// 	Route::get('/home', function(){
+	Route::get('/home', function(){
 
-// 		return view('home');
+		return view('home');
 
-// 	})->name('home');
+    })->name('home');
+    
+    //end of the line pls add some more roles
 
-// 	Route::get('/dashboard', function(){
+	Route::get('/dashboard', function(){
 
-// 		return view('dashboard');
+		return view('dashboard');
 
-// 	})->name('dashboard');
+	})->name('dashboard');
 
-// });
+});
 
 
 

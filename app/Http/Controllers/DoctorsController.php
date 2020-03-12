@@ -45,9 +45,9 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-          'lastname'=>'required',
-          'firstname'=>'required',
-          'profilepic'=>'required',
+          'last_name'=>'required',
+          'first_name'=>'required',
+          'profile_pic'=>'required',
           'phone_no'=>'required',
           'age'=>'required',
           'address'=>'required',
@@ -57,9 +57,9 @@ class DoctorsController extends Controller
 
       ]);
         Doctors::create([
-            'lastname'=>$request->lastname,
-            'firstname'=>$request->firstname,
-            'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
+            'last_name'=>$request->lastname,
+            'first_name'=>$request->firstname,
+            'profile_pic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
             'phone_no'=>$request->phone_no,
             'age'=>$request->address,
             'address'=>$request->address,
@@ -105,9 +105,9 @@ class DoctorsController extends Controller
     public function update(Request $request, $doctors_id)
     {
         $this->validate($request,[
-          'lastname' => 'required',
-          'firstname'=>'required',
-          'profilepic'=>'required',
+          'last_name' => 'required',
+          'first_name'=>'required',
+          'profile_pic'=>'required',
           'phone_no'=>'required',
           'age'=>'required',
           'address'=>'required',
@@ -116,9 +116,9 @@ class DoctorsController extends Controller
           'docs_password'=>'required',
       ]);
       Doctors::find($doctors_id)->update
-        (['lastname'=>$request->lastname,
-            'firstname'=>$request->firstname,
-            'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
+        (['last_name'=>$request->lastname,
+            'first_name'=>$request->firstname,
+            'profile_pic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
             'phone_no'=>$request->phone_no,
             'age'=>$request->age,
             'address'=>$request->address,

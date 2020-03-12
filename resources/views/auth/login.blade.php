@@ -9,7 +9,7 @@
                 <div class="panel-heading bgblue" style="border-style: black;"><i class="glyphicon glyphicon-plus" style="font-size: 30px; color: red"></i> <b style="color: white">Clinic Management Login</b></div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('login.custom') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

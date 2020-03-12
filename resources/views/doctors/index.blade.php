@@ -39,9 +39,9 @@
     @foreach ($doctors as $doctor)
       <tr>
         <td>{{$no++}}</td>
-        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $doctor->profilepic }}" /></td>
-        <td>{{ $doctor->lastname }}</td>
-        <td>{{ $doctor->firstname }}</td>
+        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $doctor->profile_pic }}" /></td>
+        <td>{{ $doctor->last_name }}</td>
+        <td>{{ $doctor->first_name }}</td>
         <td>{{ $doctor->phone_no }}</td>
         <td>{{ $doctor->age }}</td>
         <td>{{ $doctor->address }}</td>
