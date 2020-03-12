@@ -45,6 +45,7 @@ class PatientsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
+            'doc_id'=>'required|string|max:255',
             'symptoms'=>'required|string|max:255',
             'firstname'=>'required',
             'lastname'=>'required',
@@ -57,7 +58,9 @@ class PatientsController extends Controller
             'contactnum'=>'required',
 
       ]);
+    //   dd($request->doc_id);
         Patients::create([
+            'doc_id'=>$request->doc_id,
             'symptoms'=>$request->symptoms,
             'firstname'=>$request->firstname,
             'lastname'=>$request->lastname,
@@ -72,6 +75,7 @@ class PatientsController extends Controller
         ]);
         return redirect()->route('patients.index')->with('success','Patients created success');
     }
+
 
     /**
      * Display the specified resource.
@@ -107,7 +111,8 @@ class PatientsController extends Controller
     public function update(Request $request, $patients_id)
     {
         $this->validate($request,[
-            'symptoms' => 'required',
+            'doc_id' => 'required',
+            'symptoms'=>'required',
             'firstname'=>'required',
             'lastname'=>'required',
             'profilepic'=>'required',
@@ -119,7 +124,8 @@ class PatientsController extends Controller
             'contactnum'=>'required',
       ]);
       Patients::find($patients_id)->update
-        ([  'symptoms'=>$request->symptoms,
+        ([  'doc_id'=>$request->doc_id,
+            'symptoms'=>$request->symptoms,
             'firstname'=>$request->firstname,
             'lastname'=>$request->lastname,
             'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),

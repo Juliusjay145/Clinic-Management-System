@@ -8,13 +8,14 @@ class CreatePatientsTable extends Migration
 {
     /**
      * Run the migrations.
+     * 
      *
      * @return void
      */
     public function up()
     {
         Schema::create('patients', function (Blueprint $table) {
-            $table->integer('patients_id')->unsigned();
+            $table->increments('patients_id');
             //dri dapita nagrefer cya sa id sa table na posts iyang gi rename na post_id
             $table->integer('doc_id')->unsigned();
             $table->foreign('doc_id')->references('doctors_id')->on('doctors');

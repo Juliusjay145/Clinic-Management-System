@@ -20,6 +20,7 @@
      <thead class="thead-dark">
     <tr>
       <th with="80px" scope="row">No</th>
+      <th scope="col">Doctor</th>
       <th scope="col">Symptoms</th>
       <th scope="col">First name</th>
       <th scope="col">Last name</th>
@@ -41,6 +42,7 @@
     @foreach ($patients as $patient)
       <tr>
         <td>{{$no++}}</td>
+        <td>{{ $patient->doc_id }}</td>
         <td>{{ $patient->symptoms }}</td>
         <td>{{ $patient->firstname }}</td>
         <td>{{ $patient->lastname }}</td>
@@ -53,13 +55,13 @@
         <td>{{ $patient->contactnum }}</td>
         <!-- <td>{{ $patient->contactnum }}</td> -->
         <td>
-          <a class="button teal" style="width: 100px" href="{{route('patients.show',$patient->id)}}">
+          <a class="button teal" style="width: 100px" href="{{route('patients.show',$patient->patients_id)}}">
               <i class="far fa-eye"> View</i>
           </a>
-          <a class="button rss" style="width: 100px;" href="{{route('patients.edit',$patient->id)}}">
+          <a class="button rss" style="width: 100px;" href="{{route('patients.edit',$patient->patients_id)}}">
               <i class="fas fa-edit"> Edit</i>
           </a>
-            {!! Form::open(['method' => 'DELETE','route' => ['patients.destroy', $patient->id],'style'=>'display:inline']) !!}
+            {!! Form::open(['method' => 'DELETE','route' => ['patients.destroy', $patient->patients_id],'style'=>'display:inline']) !!}
               <button type="submit" style="display: inline; width: 100px" class="button btn dsgnmoo">
                 <i class="fas fa-trash" style="font-size: 13px"> Delete</i>
               </button> 

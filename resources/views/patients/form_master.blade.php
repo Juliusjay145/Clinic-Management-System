@@ -38,7 +38,28 @@ button.button.green:active {
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
 
+            <div class="row">
+                <div class="col-sm-2">
+                  {!! form::label('bosy','Select your Doctor') !!}
+                </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('doc_id') ? 'has-error' : "" }}" style="color: red">
+                    {{ $errors->first('doc_id') }}
+                      <select id="doc_id" name="doc_id" class="form-control" style="width: 200px">
 
+                        <option id="A+" value="1">
+                          <b for="A+" >Dr. Juan Dela Cruz</b>
+                        </option>
+
+                        <option id="A-" value="2">
+                          <b for="A-" >Dr. Juana Dela Cruz</b>
+                        </option>
+
+
+                      </select>
+                  </div>
+                </div>
+              </div>
 
               <div class="row" >
                  <div class="col-sm-2">
@@ -92,6 +113,8 @@ button.button.green:active {
                    </div>
                 </div>
               </div>
+
+              
 
 
 
@@ -209,6 +232,7 @@ button.button.green:active {
                   </div>
                 </div>
               </div>
+              
 
 
 

@@ -30,7 +30,7 @@ button.button.green:active {
 </style>
 <div class="container-fluid" style="margin-top: 20px; margin-bottom: 2px">
 
- <h1 class="h3 mb-1 text-gray-900">Patient Form</h1>
+ <h1 class="h3 mb-1 text-gray-900">Doctors Form</h1>
 
 
 
