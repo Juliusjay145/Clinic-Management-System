@@ -120,7 +120,7 @@ class DoctorsController extends Controller
             'firstname'=>$request->firstname,
             'profilepic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
             'phone_no'=>$request->phone_no,
-            'age'=>$request->address,
+            'age'=>$request->age,
             'address'=>$request->address,
             'state'=>$request->state,
             'docs_username'=>$request->docs_username,

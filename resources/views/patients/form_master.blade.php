@@ -47,12 +47,16 @@ button.button.green:active {
                     {{ $errors->first('doc_id') }}
                       <select id="doc_id" name="doc_id" class="form-control" style="width: 200px">
 
-                        <option id="A+" value="1">
-                          <b for="A+" >Dr. Juan Dela Cruz</b>
+                        <option id="A" value="1">
+                          <b for="A" >Dr. Juan Dela Cruz</b>
                         </option>
 
-                        <option id="A-" value="2">
-                          <b for="A-" >Dr. Juana Dela Cruz</b>
+                        <option id="B" value="2">
+                          <b for="B" >Dr. Juana Dela Cruz</b>
+                        </option>
+
+                        <option id="B" value="3">
+                          <b for="B" >Dr. Tony Amigo Dayondon</b>
                         </option>
 
 

@@ -22,9 +22,9 @@
       <th with="80px" scope="row">No</th>
       <th scope="col">Doctor</th>
       <th scope="col">Symptoms</th>
+      <th scope="col">Patients Profile</th>
       <th scope="col">First name</th>
       <th scope="col">Last name</th>
-      <th scope="col">Profile Picture</th>
       <th scope="col">Gender</th>
       <th scope="col">Blood Type</th>
       <th scope="col">Birthday</th>
@@ -44,9 +44,9 @@
         <td>{{$no++}}</td>
         <td>{{ $patient->doc_id }}</td>
         <td>{{ $patient->symptoms }}</td>
+        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $patient->profilepic }}" /></td>
         <td>{{ $patient->firstname }}</td>
         <td>{{ $patient->lastname }}</td>
-        <td><img style="width: auto; height: 100px;" src="data:image/jpeg;base64, {{ $patient->profilepic }}" /></td>
         <td>{{ $patient->gender }}</td>
         <td>{{ $patient->bloodtype }}</td>
         <td>{{ $patient->birthday }}</td>

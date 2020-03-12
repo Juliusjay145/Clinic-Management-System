@@ -39,7 +39,7 @@
     @foreach ($doctors as $doctor)
       <tr>
         <td>{{$no++}}</td>
-        <td><img style="width: auto; height: 100px;" src="data:image/jpeg;base64, {{ $doctor->profilepic }}" /></td>
+        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $doctor->profilepic }}" /></td>
         <td>{{ $doctor->lastname }}</td>
         <td>{{ $doctor->firstname }}</td>
         <td>{{ $doctor->phone_no }}</td>
