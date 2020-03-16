@@ -57,9 +57,9 @@ class DoctorsController extends Controller
 
       ]);
         Doctors::create([
-            'last_name'=>$request->lastname,
-            'first_name'=>$request->firstname,
-            'profile_pic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
+            'last_name'=>$request->last_name,
+            'first_name'=>$request->first_name,
+            'profile_pic'=>base64_encode(file_get_contents($request->file('profile_pic')->path())),
             'phone_no'=>$request->phone_no,
             'age'=>$request->address,
             'address'=>$request->address,
@@ -116,9 +116,9 @@ class DoctorsController extends Controller
           'docs_password'=>'required',
       ]);
       Doctors::find($doctors_id)->update
-        (['last_name'=>$request->lastname,
-            'first_name'=>$request->firstname,
-            'profile_pic'=>base64_encode(file_get_contents($request->file('profilepic')->path())),
+        (['last_name'=>$request->last_name,
+            'first_name'=>$request->first_name,
+            'profile_pic'=>base64_encode(file_get_contents($request->file('profile_pic')->path())),
             'phone_no'=>$request->phone_no,
             'age'=>$request->age,
             'address'=>$request->address,

@@ -1,34 +1,29 @@
-@extends('layouts.app')
+@extends('layouts.superadminapp')
 @section('content')
 
       <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid w3-panel w3-card-4" style="border-radius:10px">
 
           <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-
-                                     @if (session('status'))
-                                        <div class="alert alert-success">
-                                            {{ session('status') }}
-                                        </div>
-                                    @endif
-
-                                   <h1>welcome to dashboardsssssssss</h1>
-            <a href="{{ url('/posts/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50"></i> Add Patient</a>
+          <div class="d-sm-flex align-items-center justify-content-between mb-4" style="margin-top:20px;">
+            <h1 class="h3 mb-0 text-gray-800">Clinic Management Admin Dashboard</h1>
+                  @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                  @endif
+                  <b>Welcome back Master!</b>
+            <a href="{{ url('/posts/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient</a>
 
 
-                                
-
-                                    
+                                                            
           </div>
-
           <!-- Content Row -->
           <div class="row">
 
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
+              <div class="card border-left-primary w3-panel w3-card-4 h-80 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -46,7 +41,7 @@
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
             <a href="{{ url('/patients') }}" style="text-decoration:none">
-              <div class="card border-left-success shadow h-100 py-2">
+              <div class="card border-left-success w3-panel w3-card-4 py-2" style="height:110px">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -65,7 +60,7 @@
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <a href="{{ url('/doctors') }}" style="text-decoration:none">
-              <div class="card border-left-info shadow h-100 py-2">
+              <div class="card border-left-info w3-panel w3-card-4 h-90 py-2" style="height:110px">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
@@ -94,7 +89,7 @@
             
                <div class="col-xl-3 col-md-6 mb-4">
                 <a href="{{ url('/patients') }}" style="text-decoration:none">
-                  <div class="card border-left-warning shadow h-100 py-2">
+                  <div class="card border-left-warning w3-panel w3-card-4 h-90 py-2" style="height:110px">
                     <div class="card-body">
                       <div class="row no-gutters align-items-center">
                         <div class="col mr-2">

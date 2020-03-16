@@ -90,12 +90,12 @@ button.button.green:active {
               <div class="row">
                 <div class="col-sm-2"> {!!form::label('bosy','Profile Picture') !!} </div>
                   <div class="col-sm-10">
-                    <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
-                      red"> {{ $errors->first('profilepic') }} <!-- <input type="file"
+                    <div class="form-group {{$errors->has('profile_pic') ? 'has-error' : "" }}" style="color:
+                      red"> {{ $errors->first('profile_pic') }} <!-- <input type="file"
                       id="avatar" name="profilepic" accept="image/png, image/jpeg">
                       -->
                             <h6 style="color: black"> {!!
-                              Form::file('profilepic') !!}
+                              Form::file('profile_pic') !!}
                           </h6>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ button.button.green:active {
                     </div>
                     </center>
                   </div>
-                  <button type="submit" style="margin-bottom: 20px" class="button green form-control w3-right"><i class="fas fa-save"> Save</i></button>
+                  <button type="submit" style="margin-bottom: 20px" class="button green form-control w3-right" style="margin-bottom: 20px"><i class="fas fa-save"> Save</i></button>
                   </div>
               </div>
 

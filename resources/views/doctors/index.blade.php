@@ -1,6 +1,30 @@
 @extends('layouts.app')
 @section('content')
- <div id="page-wrapper" style="background: white;">
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #235CC6;
+  color: white;
+}
+</style>
+ <div id="page-wrapper" class="w3-panel w3-card-4" style="background: white; border-radius:10px">
   <div class="row">
   <div class="col-sm-12">
     <div class="full-right">
@@ -15,10 +39,10 @@
       </div>
   @endif
 <center>
-<div style="overflow-x:auto;">
-  <table class="table">
-     <thead class="thead-dark">
-    <tr>
+<div style="overflow-x:auto; ">
+  <table id="customers" style="margin: 10px;">
+     <thead style="border-radius:10px">
+    <tr style="color: #000000; border-radius:10px">
       <th with="80px" scope="row">No</th>
       <th scope="col">Profile Picture</th>
       <th scope="col">Lastname</th>

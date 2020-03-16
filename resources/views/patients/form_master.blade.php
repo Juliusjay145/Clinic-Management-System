@@ -118,7 +118,7 @@ button.button.green:active {
                 </div>
               </div>
 
-              
+
 
 
 
@@ -236,12 +236,12 @@ button.button.green:active {
                   </div>
                 </div>
               </div>
-              
 
 
 
 
-              <button type="submit" class="button green form-control w3-right"><i class="fas fa-save"> Save</i></button>
+
+              <button type="submit" class="button green form-control w3-right" style="margin-bottom: 20px"><i class="fas fa-save"> Save</i></button>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
