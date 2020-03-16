@@ -28,7 +28,7 @@ button.button.green:active {
     border: solid 1px #6e883f;
     box-shadow: inset 0 10px 15px 0 #90b352; }
 </style>
-<div class="container-fluid"  style="margin-top: 10px">
+<div class="container-fluid w3-panel w3-card-4" style="margin-top: 10px; border-radius:10px;">
 
  <h1 class="h3 mb-1 text-gray-900">Patient Form</h1>
 
@@ -37,40 +37,40 @@ button.button.green:active {
 
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
+                
+                <div class="row">
+                  <div class="col-sm-2">
+                    {!! form::label('bosy','Select your Doctor') !!}
+                  </div>
+                  <div class="col-sm-10">
+                  
+                    <div class="form-group {{ $errors->has('doc_id') ? 'has-error' : "" }}" style="color: red">
+                      {{ $errors->first('doc_id') }}
+                        <select id="doc_id" name="doc_id" class="form-control" style="width: 200px">
 
-            <div class="row">
-                <div class="col-sm-2">
-                  {!! form::label('bosy','Select your Doctor') !!}
-                </div>
-                <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('doc_id') ? 'has-error' : "" }}" style="color: red">
-                    {{ $errors->first('doc_id') }}
-                      <select id="doc_id" name="doc_id" class="form-control" style="width: 200px">
+                          <option id="A" value="1">
+                            <b for="A" >Dr. Juan Dela Cruz</b>
+                          </option>
 
-                        <option id="A" value="1">
-                          <b for="A" >Dr. Juan Dela Cruz</b>
-                        </option>
+                          <option id="B" value="2">
+                            <b for="B" >Dr. Juana Dela Cruz</b>
+                          </option>
 
-                        <option id="B" value="2">
-                          <b for="B" >Dr. Juana Dela Cruz</b>
-                        </option>
+                          <option id="B" value="3">
+                            <b for="B" >Dr. Tony Amigo Dayondon</b>
+                          </option>
 
-                        <option id="B" value="3">
-                          <b for="B" >Dr. Tony Amigo Dayondon</b>
-                        </option>
-
-
-                      </select>
+                        </select>
+                    </div>
                   </div>
                 </div>
-              </div>
 
               <div class="row" >
-                 <div class="col-sm-2">
+                 <div class="col-sm-2 ">
                     {!! form::label('symptoms','Symptoms Case') !!}
                   </div>
                 <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('symptoms') ? 'has-error' : "" }}" style="color: red">
+                  <div class=" form-group {{ $errors->has('symptoms') ? 'has-error' : "" }}" style="color: red">
                     {{ Form::text('symptoms',NULL, ['class'=>'form-control', 'id'=>'symptoms', 'placeholder'=>'Symptoms Cases...']) }}
                     {{ $errors->first('symptoms') }}
                   </div>
@@ -131,6 +131,7 @@ button.button.green:active {
                 <div class="col-sm-2">
                   {!! form::label('bosy','Gender') !!}
                 </div>
+              
                 <div class="col-sm-10">
                   <div class="form-group {{ $errors->has('gender') ? 'has-error' : "" }}" style="color: red">
                     {{ $errors->first('gender') }}<br>

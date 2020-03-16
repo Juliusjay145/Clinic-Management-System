@@ -41,6 +41,7 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+
 *,
 *::before,
 *::after {
@@ -52,6 +53,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: url("/css/img/patient.jpg");
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -77,6 +79,7 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  background: url("/img/patient 4.jpg") repeat-y top left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -3990,6 +3993,8 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   list-style: none;
 }
+
+
 
 .navbar-nav .nav-link {
   padding-right: 0;

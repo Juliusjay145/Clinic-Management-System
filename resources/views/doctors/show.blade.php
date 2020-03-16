@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div id="page-wrapper" style="background: white; margin-bottom: 20px">
+<div id="page-wrapper" style="background: white; margin-bottom: 20px;  border-radius:10px" class="w3-panel w3-card-4">
 
 <div class="row">
     <div class="col-lg-12 margin-tb">
@@ -22,7 +22,7 @@
             <!-- Border Left Utilities -->
             <div class="col-lg-6">
 
-              <div class="card mb-4 py-3 border-bottom-success">
+              <div class="card mb-4 py-3 border-bottom-primary w3-panel w3-card-4" style="margin-top:-20px">
                 <div class="card-body">
                   <strong>Lastname: </strong>
                         {{ $doctor->last_name}}
@@ -53,12 +53,6 @@
                         {{ $doctor->state}}
                 </div>
 
-                <div class="card-body">
-                  <strong>Profile Picture : </strong>
-                  <center>
-                    <img style="width: auto; height: 100px; margin-top: 10px" src="data:image/jpeg;base64, {{ $doctor->profile_pic }}" />
-                    </center>
-                </div>
               </div>   
 
             </div>
@@ -66,24 +60,21 @@
             <!-- Border Bottom Utilities -->
             <div class="col-lg-6">
 
-              <div class="card mb-4 py-3 border-bottom-warning">
-                <div class="card-body">
-                  <strong>Doctors Username: </strong>
-                        {{ $doctor->docs_username}}
-                </div>
-              </div>
 
-              <div class="card mb-4 py-3 border-bottom-warning">
+              <div class="card mb-4 py-3 border-bottom-success w3-panel w3-card-4" style="width: 200px; margin-left: 25px; margin-top:-20px ">
                 <div class="card-body">
-                  <strong>Doctors Password: </strong>
-                        {{ $doctor->docs_password}}
+                  <strong>Profile Picture: </strong>
+                  <center>
+                    <img style="width: auto; height: 100px; margin-top: 10px; border-radius: 50%" src="data:image/jpeg;base64, {{ $doctor->profile_pic }}" style="border-radius:10px"/>
+                    </center>
                 </div>
-              </div>
+              </div>  
+
+              
 
             </div>
 
           </div>
-
 
 </div>
 @endsection

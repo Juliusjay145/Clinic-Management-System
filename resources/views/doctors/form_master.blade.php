@@ -28,7 +28,7 @@ button.button.green:active {
     border: solid 1px #6e883f;
     box-shadow: inset 0 10px 15px 0 #90b352; }
 </style>
-<div class="container-fluid" style="margin-top: 20px; margin-bottom: 2px">
+<div class="container-fluid w3-panel w3-card-4"" style="margin-top: 20px; margin-bottom: 2px; border-radius:10px" >
 
  <h1 class="h3 mb-1 text-gray-900">Doctors Form</h1>
 
