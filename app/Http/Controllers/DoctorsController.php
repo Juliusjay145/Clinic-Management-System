@@ -45,6 +45,7 @@ class DoctorsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
+          'user_id'=>'required',  
           'last_name'=>'required',
           'first_name'=>'required',
           'profile_pic'=>'required',
@@ -57,6 +58,7 @@ class DoctorsController extends Controller
 
       ]);
         Doctors::create([
+            'user_id'=>$request->user_id,
             'last_name'=>$request->last_name,
             'first_name'=>$request->first_name,
             'profile_pic'=>base64_encode(file_get_contents($request->file('profile_pic')->path())),
@@ -105,6 +107,7 @@ class DoctorsController extends Controller
     public function update(Request $request, $doctors_id)
     {
         $this->validate($request,[
+          'user_id' => 'required',
           'last_name' => 'required',
           'first_name'=>'required',
           'profile_pic'=>'required',
@@ -116,7 +119,8 @@ class DoctorsController extends Controller
           'docs_password'=>'required',
       ]);
       Doctors::find($doctors_id)->update
-        (['last_name'=>$request->last_name,
+        ([  'user_id'=>$request->user_id,
+            'last_name'=>$request->last_name,
             'first_name'=>$request->first_name,
             'profile_pic'=>base64_encode(file_get_contents($request->file('profile_pic')->path())),
             'phone_no'=>$request->phone_no,

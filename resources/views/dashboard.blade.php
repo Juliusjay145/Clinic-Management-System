@@ -12,8 +12,10 @@
                         {{ session('status') }}
                     </div>
                   @endif
-                  <b>Welcome back Master!</b>
-            <a href="{{ url('/posts/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient</a>
+                  <p>
+                  Welcome back <b>{{ Auth::user()->name }}</b>
+                  </p>
+            
 
 
                                                             
@@ -57,14 +59,32 @@
             </a>
             </div>
 
+              <div class="col-xl-3 col-md-6 mb-4">
+                <a href="{{ url('/patients') }}" style="text-decoration:none">
+                  <div class="card border-left-warning w3-panel w3-card-4 h-90 py-2" style="height:110px">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Show Over all Patients</div>
+                          <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        </div>
+                        <div class="col-auto">
+                          <i class="fas fa-users fa-2x text-gray-300"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <a href="{{ url('/doctors') }}" style="text-decoration:none">
+              <a href="{{ url('/doctors/superadminindex') }}" style="text-decoration:none">
               <div class="card border-left-info w3-panel w3-card-4 h-90 py-2" style="height:110px">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Doctors</div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Over all Doctors</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
@@ -87,23 +107,7 @@
 
             <!-- Pending Requests Card Example -->
             
-               <div class="col-xl-3 col-md-6 mb-4">
-                <a href="{{ url('/patients') }}" style="text-decoration:none">
-                  <div class="card border-left-warning w3-panel w3-card-4 h-90 py-2" style="height:110px">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Show Over all Patients</div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                        </div>
-                        <div class="col-auto">
-                          <i class="fas fa-users fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                 </a>
-                </div>
+               
             
           </div>
 

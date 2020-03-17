@@ -15,6 +15,8 @@ class CreateTablePosts extends Migration
     {
         Schema::create('posts', function (Blueprint $table){
           $table->increments('id');
+          $table->integer('customer_id')->unsigned();
+            $table->foreign('customer_id')->references('id')->on('posts');
           $table->string('symptoms');
           $table->string('firstname');
           $table->string('lastname');

@@ -46,6 +46,7 @@ Route::get('/docsappointment', function () {
 });
 
 
+
 Route::get('/posts/main', 'PostsController@postsample');
 
 Route::get('/posts/nextpage', 'PostsController@nextpls');
@@ -59,8 +60,6 @@ Route::get('/samplefolder/sample', 'SampleController@postsamples');
 Route::get('/doctors/medicines', 'DoctorsController@medmethod');
 
 Route::get('/doctors/docdashboard', 'DoctorsController@docsmethod');
-
-
 
 Auth::routes();
 
@@ -76,13 +75,6 @@ Route::resource('posts','PostsController');
 Route::resource('doctors','DoctorsController');
 
 Route::resource('patients','PatientsController');
-
-// Route::post('/login',[
-
-// 	'uses'	=>	 'LoginController@login',
-// 	'as'	=>	 'login'
-
-// ]);
 
 Route::group(['middleware' => 'auth'], function(){
 

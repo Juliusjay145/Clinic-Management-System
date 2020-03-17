@@ -23,6 +23,11 @@
             <div class="col-lg-6">
 
               <div class="card mb-4 py-3 border-bottom-primary w3-panel w3-card-4" style="margin-top:-20px">
+              <div class="card-body">
+                  <strong>Doctor ID: </strong>
+                        {{ $doctor->user_id}}
+                </div>
+                
                 <div class="card-body">
                   <strong>Lastname: </strong>
                         {{ $doctor->last_name}}

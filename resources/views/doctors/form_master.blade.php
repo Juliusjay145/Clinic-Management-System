@@ -28,9 +28,28 @@ button.button.green:active {
     border: solid 1px #6e883f;
     box-shadow: inset 0 10px 15px 0 #90b352; }
 </style>
-<div class="container-fluid w3-panel w3-card-4"" style="margin-top: 20px; margin-bottom: 2px; border-radius:10px" >
+<div class="container-fluid " style="margin-top: 20px; margin-bottom: 2px; border-radius:10px" >
 
  <h1 class="h3 mb-1 text-gray-900">Doctors Form</h1>
+ 
+              <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
+                {{ $errors->first('user_id') }}
+                  <select id="user_id" name="user_id" class="form-control" style="width: 200px">
+
+                    <option id="A" value="3">
+                      <b for="A" >Dr. Marc Dela Torre</b>
+                    </option>
+
+                    <option id="B" value="4">
+                      <b for="B" >Dr. Morphy Calandada</b>
+                    </option>
+
+                    <option id="B" value="5">
+                      <b for="B" >Dr. Julius Jay Buenavista</b>
+                    </option>
+
+                  </select>
+              </div>
 
 
 
@@ -40,6 +59,7 @@ button.button.green:active {
 
 
 <div class="row" >
+              
               <div class="col-sm-2">
                     {!! form::label('last_name','Last Name') !!}
                   </div>
@@ -62,6 +82,7 @@ button.button.green:active {
                   </div>
                 </div>
               </div>
+              
 
               <div class="row" >
                  <div class="col-sm-2">
@@ -157,9 +178,10 @@ button.button.green:active {
                     </div>
                     </center>
                   </div>
-                  <button type="submit" style="margin-bottom: 20px" class="button green form-control w3-right" style="margin-bottom: 20px"><i class="fas fa-save"> Save</i></button>
+                  
                   </div>
               </div>
+              <button type="submit" style="margin-bottom: 20px" class="button green form-control w3-right" style="margin-bottom: 20px"><i class="fas fa-save"> Save</i></button>
 
   
 </div>

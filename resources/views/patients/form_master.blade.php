@@ -27,8 +27,10 @@ button.button.green:active {
     background: linear-gradient(#a4cb5d, #9ec45a);
     border: solid 1px #6e883f;
     box-shadow: inset 0 10px 15px 0 #90b352; }
+
+    
 </style>
-<div class="container-fluid w3-panel w3-card-4" style="margin-top: 10px; border-radius:10px;">
+<div class="container-fluid" style="margin-top: 10px; border-radius:10px;">
 
  <h1 class="h3 mb-1 text-gray-900">Patient Form</h1>
 
@@ -43,6 +45,8 @@ button.button.green:active {
                     {!! form::label('bosy','Select your Doctor') !!}
                   </div>
                   <div class="col-sm-10">
+
+                  <!-- <img src="{{ asset('img/patient.jpg') }}" style="width:auto; height:50px; border-radius:50%"> -->
                   
                     <div class="form-group {{ $errors->has('doc_id') ? 'has-error' : "" }}" style="color: red">
                       {{ $errors->first('doc_id') }}
@@ -67,6 +71,7 @@ button.button.green:active {
 
               <div class="row" >
                  <div class="col-sm-2 ">
+                 
                     {!! form::label('symptoms','Symptoms Case') !!}
                   </div>
                 <div class="col-sm-10">
@@ -83,6 +88,7 @@ button.button.green:active {
                   {!! form::label('bosy','Firstname') !!}
                 </div>
                 <div class="col-sm-10">
+                
                   <div class="form-group {{ $errors->has('firstname') ? 'has-error' : "" }}" style="color: red">
                     {{ Form::text('firstname',NULL, ['class'=>'form-control', 'id'=>'firstname', 'placeholder'=>'First Name...']) }}
                     {{ $errors->first('firstname') }}

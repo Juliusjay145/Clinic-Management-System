@@ -44,6 +44,7 @@
      <thead style="border-radius:10px">
     <tr style="color: #000000; border-radius:10px">
       <th with="80px" scope="row">No</th>
+      <th scope="col">Doctor Id</th>
       <th scope="col">Profile Picture</th>
       <th scope="col">Lastname</th>
       <th scope="col">Firstname</th>
@@ -63,6 +64,7 @@
     @foreach ($doctors as $doctor)
       <tr>
         <td>{{$no++}}</td>
+        <td>{{ $doctor->user_id }}</td>
         <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $doctor->profile_pic }}" /></td>
         <td>{{ $doctor->last_name }}</td>
         <td>{{ $doctor->first_name }}</td>
