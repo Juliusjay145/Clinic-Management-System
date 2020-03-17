@@ -28,7 +28,7 @@ button.button.green:active {
     border: solid 1px #6e883f;
     box-shadow: inset 0 10px 15px 0 #90b352; }
 
-    
+
 </style>
 <div class="container-fluid" style="margin-top: 10px; border-radius:10px;">
 
@@ -39,7 +39,7 @@ button.button.green:active {
 
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
-                
+
                 <div class="row">
                   <div class="col-sm-2">
                     {!! form::label('bosy','Select your Doctor') !!}
@@ -47,31 +47,25 @@ button.button.green:active {
                   <div class="col-sm-10">
 
                   <!-- <img src="{{ asset('img/patient.jpg') }}" style="width:auto; height:50px; border-radius:50%"> -->
-                  
-                    <div class="form-group {{ $errors->has('doc_id') ? 'has-error' : "" }}" style="color: red">
-                      {{ $errors->first('doc_id') }}
-                        <select id="doc_id" name="doc_id" class="form-control" style="width: 200px">
 
-                          <option id="A" value="1">
-                            <b for="A" >Dr. Juan Dela Cruz</b>
-                          </option>
+                  <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
+                      <select id="user_id" name="user_id" class="form-control" style="width: 200px">
 
-                          <option id="B" value="2">
-                            <b for="B" >Dr. Juana Dela Cruz</b>
-                          </option>
+                        @foreach ($lastname_array as $data)
+                        <option class="form-group" value="{{ $data->doctors_id }}">
+                          <b>Dr.</b> {{ $data->last_name }} {{ $data->first_name }}
+                        </option>
+                        @endforeach
 
-                          <option id="B" value="3">
-                            <b for="B" >Dr. Tony Amigo Dayondon</b>
-                          </option>
+                      </select>
+                  </div>
 
-                        </select>
-                    </div>
                   </div>
                 </div>
 
               <div class="row" >
                  <div class="col-sm-2 ">
-                 
+
                     {!! form::label('symptoms','Symptoms Case') !!}
                   </div>
                 <div class="col-sm-10">
@@ -88,7 +82,7 @@ button.button.green:active {
                   {!! form::label('bosy','Firstname') !!}
                 </div>
                 <div class="col-sm-10">
-                
+
                   <div class="form-group {{ $errors->has('firstname') ? 'has-error' : "" }}" style="color: red">
                     {{ Form::text('firstname',NULL, ['class'=>'form-control', 'id'=>'firstname', 'placeholder'=>'First Name...']) }}
                     {{ $errors->first('firstname') }}
@@ -137,7 +131,7 @@ button.button.green:active {
                 <div class="col-sm-2">
                   {!! form::label('bosy','Gender') !!}
                 </div>
-              
+
                 <div class="col-sm-10">
                   <div class="form-group {{ $errors->has('gender') ? 'has-error' : "" }}" style="color: red">
                     {{ $errors->first('gender') }}<br>
