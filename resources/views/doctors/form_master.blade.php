@@ -36,17 +36,11 @@ button.button.green:active {
                 {{ $errors->first('user_id') }}
                   <select id="user_id" name="user_id" class="form-control" style="width: 200px">
 
-                    <option id="A" value="3">
-                      <b for="A" >Dr. Marc Dela Torre</b>
-                    </option>
-
-                    <option id="B" value="4">
-                      <b for="B" >Dr. Morphy Calandada</b>
-                    </option>
-
-                    <option id="B" value="5">
-                      <b for="B" >Dr. Julius Jay Buenavista</b>
-                    </option>
+                        @foreach ($patients_array as $data)
+                          <option class="form-group" value="{{ $data->patients_id }}">
+                            <b>Dr.</b> {{ $data->lastname }} {{ $data->firstname }}
+                          </option>
+                        @endforeach
 
                   </select>
               </div>

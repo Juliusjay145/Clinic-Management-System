@@ -178,6 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\DynamicDoctorsname::class,
+        App\Providers\DynamicPatientsname::class,
 
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
 
