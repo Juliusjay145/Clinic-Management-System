@@ -67,7 +67,10 @@
     @foreach ($patients as $patient)
       <tr>
         <td>{{$no++}}</td>
-        <td>{{ $patient->doc_id }}</td>
+        
+        @foreach ($lastname_array as $data)
+          <td value="{{ $data->doctors_id }}">{{ $data->last_name }} {{ $data->first_name }}</td>
+        @endforeach
         <!-- <td>{{ $patient->doctor->firstname }} {{ $patient->doctor->lastname }}</td> -->
         <td>{{ $patient->symptoms }}</td>
         <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $patient->profilepic }}" /></td>

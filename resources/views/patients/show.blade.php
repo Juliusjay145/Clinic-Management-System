@@ -23,7 +23,12 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Doctor : </strong>
-                            {{ $patient->doc_id}}
+                            @foreach ($lastname_array as $data)
+                            <p value="{{ $data->doctors_id }}">
+                            <p style="border-style: outset;">
+                                <b>&nbsp;Dr.</b> {{ $data->last_name }}, {{ $data->first_name }}</p>
+                            </p>    
+                            @endforeach
                         </div>
                     </div>
 

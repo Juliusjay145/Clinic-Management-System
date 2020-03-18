@@ -26,6 +26,10 @@ Route::get('/doctors', function () {
     return view('doctors.index');
 });
 
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+
 Route::get('/patients', function () {
     return view('patients.index');
 });
@@ -73,6 +77,8 @@ Route::post('/login/custom', [
 Route::resource('posts','PostsController');
 
 Route::resource('doctors','DoctorsController');
+
+Route::resource('admin','LoginController');
 
 Route::resource('patients','PatientsController');
 
