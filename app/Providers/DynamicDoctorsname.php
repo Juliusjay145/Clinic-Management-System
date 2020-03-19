@@ -9,7 +9,7 @@ class DynamicDoctorsname extends ServiceProvider
     public function boot()
     {
         view()->composer('*', function($view){
-            $view->with('lastname_array', Doctors::all()); //array which is use to store all data table data
+            $view->with('doctors_array', Doctors::all()); //array which is use to store all data table data
         });
     }
 

@@ -100,7 +100,7 @@
 
             <div class="content">
                 <div class="title m-b-md text1"  style="color: white">
-                   <i class="fa fa-plus" style="font-size: 50px; color: red"></i> Clinic Management System
+                <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 15%; height: auto;margin-left:20px"> Clinic Management System
 
                 </div>
 

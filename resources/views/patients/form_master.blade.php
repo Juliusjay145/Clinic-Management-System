@@ -51,14 +51,15 @@ button.button.green:active {
                   <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
                       <select id="user_id" name="user_id" class="form-control" style="width: 200px">
 
-                        @foreach ($lastname_array as $data)
+                        @foreach ($patients_array as $data)
                         <option class="form-group" value="{{ $data->doctors_id }}">
-                          <b>Dr.</b> {{ $data->last_name }} {{ $data->first_name }}
+                          <b>Dr.</b> {{ $data->lastname }}
                         </option>
                         @endforeach
 
                       </select>
                   </div>
+
 
                   </div>
                 </div>

@@ -42,11 +42,8 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/dashboard') }}">
-        <div class="sidebar-brand-icon">
-          <i class="fas fa-plus" style="color: red"></i>
-        </div>
-        <link rel="icon" href="{{ asset('img/myimage.png') }}"/>
-        <div class="sidebar-brand-text mx-3">Superadmin Clinic Management</div>
+        <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 35%; height: auto;margin-left:10px">
+        <div class="sidebar-brand-text mx-3"><h5 style="margin-left:-20px"><b>Superadmin Clinic Management</b></h5></div>
       </a>
 
       <!-- Divider -->

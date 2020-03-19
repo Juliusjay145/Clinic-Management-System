@@ -32,6 +32,36 @@ button.button.green:active {
 
  <h1 class="h3 mb-1 text-gray-900">Doctors Form</h1>
  
+ <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
+                {{ $errors->first('user_id') }} 
+                  <select id="user_id" name="user_id" class="form-control" style="width: 200px">
+
+                  @foreach ($doctors_array as $data)
+                          <option class="form-group" value="{{ $data->id }}" s>
+                            <b>Dr.</b> {{ $data->name }}
+                          </option>
+                        @endforeach
+
+                   
+
+                  </select>
+              </div>
+
+              <!-- <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
+                {{ $errors->first('user_id') }}
+                  <select id="user_id" name="user_id" class="form-control" style="width: 200px">
+
+                      @foreach ($doctors_array as $data)
+                          <option class="form-group" value="{{ $data->id }}" s>
+                            <b>Dr.</b> {{ $data->name }}
+                          </option>
+                        @endforeach
+
+                  </select>
+              </div> -->
+
+
+
  <div class="row" >
 <!-- Border Left Utilities -->
 <div class="col-lg-6" style="margin-top: 20px">

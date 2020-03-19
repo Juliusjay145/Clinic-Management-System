@@ -4,7 +4,7 @@
 #customers {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 150%;
 }
 
 #customers td, #customers th {
@@ -38,6 +38,7 @@
           <p>{{ $message }}</p>
       </div>
   @endif
+  
 <center>
 <div style="overflow-x:auto; ">
   <table id="customers" style="margin: 10px;">

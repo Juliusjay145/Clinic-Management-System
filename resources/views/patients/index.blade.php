@@ -4,7 +4,9 @@
 #customers {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 150%;
+  
+
 }
 
 #customers td, #customers th {
@@ -68,7 +70,7 @@
       <tr>
         <td>{{$no++}}</td>
         
-        @foreach ($lastname_array as $data)
+        @foreach ($doctors_array as $data)
           <td value="{{ $data->doctors_id }}">{{ $data->last_name }} {{ $data->first_name }}</td>
         @endforeach
         <!-- <td>{{ $patient->doctor->firstname }} {{ $patient->doctor->lastname }}</td> -->
@@ -101,6 +103,7 @@
   </thead>
   </table>
   </div>
+
 </div>
 </center>
 </div>
