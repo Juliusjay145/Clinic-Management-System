@@ -41,6 +41,10 @@ Route::get('/samplefolder', function () {
 
 // end of sample folder functions
 
+Route::get('/userupdates', function () {
+    return view('edit');
+});
+
 Route::get('/docsappointment', function () {
     return view('medicines');
 });
@@ -60,6 +64,10 @@ Route::get('/posts/nextpage', 'PostsController@nextpls');
 Route::get('/samplefolder/sample', 'SampleController@postsamples');
 
 // end of sample routes
+
+Route::get('/edit/user/', 'UserController@edit')->name('user.edit');
+
+Route::post('/edit/user/', 'UserController@update')->name('user.update');
 
 Route::get('/doctors/medicines', 'DoctorsController@medmethod');
 

@@ -46,8 +46,6 @@ button.button.green:active {
                   </div>
                   <div class="col-sm-10">
 
-                  <!-- <img src="{{ asset('img/patient.jpg') }}" style="width:auto; height:50px; border-radius:50%"> -->
-
                   <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
                       <select id="user_id" name="user_id" class="form-control" style="width: 200px">
 

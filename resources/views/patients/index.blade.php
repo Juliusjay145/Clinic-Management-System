@@ -1,33 +1,66 @@
 @extends('layouts.app')
 @section('content')
 <style>
-#customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 150%;
-  
-
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  align-items: center;
 }
 
-#customers td, #customers th {
-
-  padding: 8px;
+.table-wrapper {
+  overflow: auto;
+  max-width: 100%;
+  background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(
+      farthest-side at 0% 50%,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+tr {
+  border-bottom: 1px solid;
+}
 
-#customers tr:hover {background-color: #ddd;}
+th {
+  background-color: #555;
+  color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+}
 
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+th,
+td {
   text-align: left;
-  background-color: #235CC6;
-  color: white;
+  padding: 0.5em 1em;
+}
+
+input[type=search] {
+  border: 1px solid;
+  font-size: initial;
+  margin-bottom: 1em;
+  padding: 0.25em;
+}
+
+.hidden {
+  display: none;
 }
 </style>
 
- <div id="page-wrapper" class="w3-panel w3-card-4" style="background: white; border-radius:10px">
+ <div id="page-wrapper" class="w3-panel w3-card-4" style="background: white; border-radius:5px">
   <div class="row">
   <div class="col-sm-12">
     <div class="full-right">
@@ -43,9 +76,9 @@
   @endif
 <center>
 <div style="overflow-x:auto; ">
-  <table id="customers" style="margin: 10px;">
-     <thead style="border-radius:10px">
-    <tr style="color: #000000; border-radius:10px">
+  <table id="filterTable" style="margin: 10px;">
+     <thead>
+    <tr>
       <th with="80px" scope="row">No</th>
       <th scope="col" >Doctor</th>
       <th scope="col" with="80px">Symptoms</th>
@@ -71,9 +104,9 @@
         <td>{{$no++}}</td>
         
         @foreach ($doctors_array as $data)
-          <td value="{{ $data->doctors_id }}">{{ $data->last_name }} {{ $data->first_name }}</td>
+          <td>{{ $data->last_name }}</td>
         @endforeach
-        <!-- <td>{{ $patient->doctor->firstname }} {{ $patient->doctor->lastname }}</td> -->
+        
         <td>{{ $patient->symptoms }}</td>
         <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $patient->profilepic }}" /></td>
         <td>{{ $patient->firstname }}</td>

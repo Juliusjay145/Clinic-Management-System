@@ -44,8 +44,8 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/home') }}">
-        <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 35%; height: auto;margin-left:20px">
-        <div class="sidebar-brand-text mx-3" style="font-size: 12px;"><h5 style="margin-left:-17px"><b>Clinic Management</b></h5></div>
+        <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 80%; height: auto;">
+        <div class="sidebar-brand-text mx-3" style="font-size: 12px;"><h5 style="margin-left:-10px"><b>Clinic Management</b></h5></div>
       </a>
 
       <!-- Divider -->
@@ -329,7 +329,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="{{ url('/edit/user') }}">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>

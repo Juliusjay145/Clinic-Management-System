@@ -23,6 +23,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Doctor : </strong>
+                            $doctor = Doctors::whereLasts name($last_name)->first();
                             @foreach ($lastname_array as $data)
                             <p value="{{ $data->doctors_id }}">
                             <p style="border-style: outset;">

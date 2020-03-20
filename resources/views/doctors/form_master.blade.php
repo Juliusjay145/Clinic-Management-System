@@ -33,19 +33,19 @@ button.button.green:active {
  <h1 class="h3 mb-1 text-gray-900">Doctors Form</h1>
  
  <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
-                {{ $errors->first('user_id') }} 
-                  <select id="user_id" name="user_id" class="form-control" style="width: 200px">
+                {{ $errors->first('user_id') }}
+                  <select id="id" name="id" class="form-control" style="width: 200px">
 
-                  @foreach ($doctors_array as $data)
-                          <option class="form-group" value="{{ $data->id }}" s>
-                            <b>Dr.</b> {{ $data->name }}
+                        @foreach ($patients_array as $data)
+                          <option class="form-group" value="{{ $data->doctors_id }}">
+                            <b>Dr.</b> {{ $data->lastname }} {{ $data->firstname }}
                           </option>
                         @endforeach
 
-                   
-
                   </select>
               </div>
+
+
 
               <!-- <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
                 {{ $errors->first('user_id') }}
