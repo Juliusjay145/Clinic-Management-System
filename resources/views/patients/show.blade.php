@@ -21,24 +21,14 @@
             <div class="col-lg-6" style="margin-bottom:20px; margin-top:-20px">
                 <div class="card mb-4 py-3 border-bottom-primary w3-panel w3-card-4" style="margin-top:-20px">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
+                    <div class="form-group">
                             <strong>Doctor : </strong>
-                            $doctor = Doctors::whereLasts name($last_name)->first();
-                            @foreach ($lastname_array as $data)
-                            <p value="{{ $data->doctors_id }}">
                             <p style="border-style: outset;">
-                                <b>&nbsp;Dr.</b> {{ $data->last_name }}, {{ $data->first_name }}</p>
+                                <b>&nbsp;Dr.</b> {{ $patient->doctor->name }}</p>
                             </p>    
-                            @endforeach
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group">
-                            <strong>Symptoms : </strong>
-                            {{ $patient->symptoms}}
-                        </div>
-                    </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">

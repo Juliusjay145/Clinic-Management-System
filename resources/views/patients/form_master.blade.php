@@ -40,82 +40,75 @@ button.button.green:active {
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
 
+              <div class="row" hidden>
+                  <div class="col-sm-2">
+                    {!! form::label('bosy','Doctor') !!}
+                  </div>
+                  <br><br><br>
+                  <div class="col-sm-10">
+
+                  <div class="form-group {{ $errors->has('doctors_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
+                  <input type="text" id="doctors_id" name="doctors_id" value="{{ Auth::user()->id }}">
+                  </div>
+
+
+                  </div>
+                </div>
+
+                <div class="row" >
+                    <div class="col-sm-2 ">
+
+                      {!! form::label('symptoms','Symptoms Case') !!}
+                    </div>
+                  <div class="col-sm-10">
+                    <div class=" form-group {{ $errors->has('symptoms') ? 'has-error' : "" }}" style="color: red">
+                      {{ Form::text('symptoms',NULL, ['class'=>'form-control', 'id'=>'symptoms', 'placeholder'=>'Symptoms Cases...']) }}
+                      {{ $errors->first('symptoms') }}
+                    </div>
+                  </div>
+                </div>
+
+
                 <div class="row">
                   <div class="col-sm-2">
-                    {!! form::label('bosy','Select your Doctor') !!}
+                    {!! form::label('bosy','Firstname') !!}
                   </div>
                   <div class="col-sm-10">
 
-                  <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
-                      <select id="user_id" name="user_id" class="form-control" style="width: 200px">
-
-                        @foreach ($patients_array as $data)
-                        <option class="form-group" value="{{ $data->doctors_id }}">
-                          <b>Dr.</b> {{ $data->lastname }}
-                        </option>
-                        @endforeach
-
-                      </select>
-                  </div>
-
-
+                    <div class="form-group {{ $errors->has('firstname') ? 'has-error' : "" }}" style="color: red">
+                      {{ Form::text('firstname',NULL, ['class'=>'form-control', 'id'=>'firstname', 'placeholder'=>'First Name...']) }}
+                      {{ $errors->first('firstname') }}
+                    </div>
                   </div>
                 </div>
 
-              <div class="row" >
-                 <div class="col-sm-2 ">
+                <div class="row">
 
-                    {!! form::label('symptoms','Symptoms Case') !!}
+                  <div class="col-sm-2">
+                    {!! form::label('bosy','Lastname') !!}
                   </div>
-                <div class="col-sm-10">
-                  <div class=" form-group {{ $errors->has('symptoms') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('symptoms',NULL, ['class'=>'form-control', 'id'=>'symptoms', 'placeholder'=>'Symptoms Cases...']) }}
-                    {{ $errors->first('symptoms') }}
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="row">
-                <div class="col-sm-2">
-                  {!! form::label('bosy','Firstname') !!}
-                </div>
-                <div class="col-sm-10">
-
-                  <div class="form-group {{ $errors->has('firstname') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('firstname',NULL, ['class'=>'form-control', 'id'=>'firstname', 'placeholder'=>'First Name...']) }}
-                    {{ $errors->first('firstname') }}
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-
-                <div class="col-sm-2">
-                  {!! form::label('bosy','Lastname') !!}
-                </div>
-                <div class="col-sm-10">
-                  <div class="form-group {{ $errors->has('lastname') ? 'has-error' : "" }}" style="color: red">
-                    {{ Form::text('lastname',NULL, ['class'=>'form-control', 'id'=>'lastname', 'placeholder'=>'Last Name...']) }}
-                    {{ $errors->first('lastname') }}
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="row">
-                <div class="col-sm-2"> {!!form::label('bosy','Prof') !!} </div>
                   <div class="col-sm-10">
-                    <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
-                      red"> {{ $errors->first('profilepic') }} <!-- <input type="file"
-                      id="avatar" name="profilepic" accept="image/png, image/jpeg">
-                      -->
-                            <h6 style="color: black"> {!!
-                              Form::file('profilepic') !!}
-                           </h6>
-                   </div>
+                    <div class="form-group {{ $errors->has('lastname') ? 'has-error' : "" }}" style="color: red">
+                      {{ Form::text('lastname',NULL, ['class'=>'form-control', 'id'=>'lastname', 'placeholder'=>'Last Name...']) }}
+                      {{ $errors->first('lastname') }}
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+
+                <div class="row">
+                  <div class="col-sm-2"> {!!form::label('bosy','Prof') !!} </div>
+                    <div class="col-sm-10">
+                      <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
+                        red"> {{ $errors->first('profilepic') }} <!-- <input type="file"
+                        id="avatar" name="profilepic" accept="image/png, image/jpeg">
+                        -->
+                              <h6 style="color: black"> {!!
+                                Form::file('profilepic') !!}
+                              </h6>
+                      </div>
+                  </div>
+                </div>
 
 
 

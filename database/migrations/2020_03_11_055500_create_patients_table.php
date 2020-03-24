@@ -17,8 +17,8 @@ class CreatePatientsTable extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->increments('patients_id');
             //dri dapita nagrefer cya sa id sa table na posts iyang gi rename na post_id
-            $table->integer('doc_id')->unsigned();
-            $table->foreign('doc_id')->references('doctors_id')->on('doctors');
+            $table->bigInteger('doctors_id')->unsigned();
+            $table->foreign('doctors_id')->references('id')->on('users');
             //end of the line                      dri dapita gikan nis doctor na table
             // $table->integer('doctor_id')->unsigned();
             // $table->integer('patient_id')->unsigned();

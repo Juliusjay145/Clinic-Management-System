@@ -38,9 +38,22 @@ button.button.green:active {
 <!-- Border Left Utilities -->
 <div class="col-lg-6" style="margin-top: 20px">
 
+              <div class="row" >
+              <div class="col-sm-2">
+              {!!form::label('bosy','Profile Picture') !!}
+                  </div>
+                <div class="col-sm-10">
+                <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
+                      red"> {{ $errors->first('profilepic') }} 
+                            <h6 style="color: black"> {!!
+                              Form::file('profilepic') !!}
+                          </h6>
+                  </div>
+                </div>
+              </div>
 
-<div class="row" >
-              
+
+              <div class="row" >
               <div class="col-sm-2">
                     {!! form::label('name','Full Name') !!}
                   </div>
@@ -76,6 +89,8 @@ button.button.green:active {
                   </div>
                 </div>
               </div>
+
+              
 
               
               <button type="submit" style="margin-bottom: 20px" class="button green form-control w3-right" style="margin-bottom: 20px"><i class="fas fa-save"> Save</i></button>

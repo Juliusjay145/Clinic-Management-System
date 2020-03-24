@@ -13,7 +13,7 @@
                     </div>
                   @endif
                   Welcome Back Doctor<b style="margin-left:-18%">{{ Auth::user()->name }}</b>
-            <a href="{{ url('/posts/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient</a>
+            <a href="{{ url('/patients/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient</a>
 
 
                                                             

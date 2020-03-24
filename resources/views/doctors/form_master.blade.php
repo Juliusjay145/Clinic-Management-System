@@ -10,7 +10,6 @@
     box-shadow: inset 0 0 0 1px #e0eeb6;
     color: #5d7731;
     text-shadow: 0 1px 0 #d0e5a4; }
-
 button.button.green:hover {
     background: #abd164;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#abd164), to(#b9d972));
@@ -19,7 +18,6 @@ button.button.green:hover {
     border: solid 1px #98b85b;
     border-bottom: solid 3px #799545;
     box-shadow: inset 0 0 0 1px #cce3a1; }
-
 button.button.green:active {
     background: #a4cb5d;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a4cb5d), to(#9ec45a));
@@ -32,46 +30,25 @@ button.button.green:active {
 
  <h1 class="h3 mb-1 text-gray-900">Doctors Form</h1>
  
- <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
-                {{ $errors->first('user_id') }}
-                  <select id="id" name="id" class="form-control" style="width: 200px">
-
-                        @foreach ($patients_array as $data)
-                          <option class="form-group" value="{{ $data->doctors_id }}">
-                            <b>Dr.</b> {{ $data->lastname }} {{ $data->firstname }}
-                          </option>
-                        @endforeach
-
-                  </select>
-              </div>
-
-
-
-              <!-- <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
-                {{ $errors->first('user_id') }}
-                  <select id="user_id" name="user_id" class="form-control" style="width: 200px">
-
-                      @foreach ($doctors_array as $data)
-                          <option class="form-group" value="{{ $data->id }}" s>
-                            <b>Dr.</b> {{ $data->name }}
-                          </option>
-                        @endforeach
-
-                  </select>
-              </div> -->
-
-
-
  <div class="row" >
 <!-- Border Left Utilities -->
 <div class="col-lg-6" style="margin-top: 20px">
 
 
 <div class="row" >
+
+          
               
               <div class="col-sm-2">
                     {!! form::label('last_name','Last Name') !!}
                   </div>
+                <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('user_id') ? 'has-error' : "" }}" style="color: red">
+                    {{ Form::text('user_id',NULL, ['class'=>'form-control', 'id'=>'user_id', 'placeholder'=>'User Name...']) }}
+                    {{ $errors->first('user_id') }}
+                  </div>
+                </div>
+
                 <div class="col-sm-10">
                   <div class="form-group {{ $errors->has('last_name') ? 'has-error' : "" }}" style="color: red">
                     {{ Form::text('last_name',NULL, ['class'=>'form-control', 'id'=>'last_name', 'placeholder'=>'Last Name...']) }}

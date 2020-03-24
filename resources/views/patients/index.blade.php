@@ -103,10 +103,8 @@ input[type=search] {
       <tr>
         <td>{{$no++}}</td>
         
-        @foreach ($doctors_array as $data)
-          <td>{{ $data->last_name }}</td>
-        @endforeach
-        
+     
+        <td>{{ $patient->doctor->name }}</td>    
         <td>{{ $patient->symptoms }}</td>
         <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $patient->profilepic }}" /></td>
         <td>{{ $patient->firstname }}</td>
