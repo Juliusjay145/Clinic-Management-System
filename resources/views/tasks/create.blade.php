@@ -46,11 +46,25 @@
                         <!--Grid column-->
                         <div class="col-md-6 form-group" style="margin-top:10px">
                             <div class="md-form">
-                                <label for="doctortype" class="">Select Date Appointments</label>
-                                <input type="date" id="task_date" name="task_date" class="form-control">
-                                    @if ($errors->has('doctortype'))
+                                <label for="doctortype" style="font-size:1vw;">Appointments or Tasks Description</label>
+                                <input type="text" id="task_description" name="task_description" class="form-control">
+                                    @if ($errors->has('task_description'))
                                         <span class="help-block">
-                                            <strong>{{ $errors->first('doctortype') }}</strong>
+                                            <strong>{{ $errors->first('task_description') }}</strong>
+                                        </span>
+                                    @endif
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6 form-group" style="margin-top:10px">
+                            <div class="md-form">
+                                <label for="doctortype" style="font-size:1vw;">Select Date Appointments</label>
+                                <input type="date" id="task_date" name="task_date" class="form-control">
+                                    @if ($errors->has('task_date'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('task_date') }}</strong>
                                         </span>
                                     @endif
                             </div>
@@ -66,23 +80,20 @@
                                         <span class="help-block">
                                             <strong>{{ $errors->first('doctors_schedule_id') }}</strong>
                                         </span>
-                                    @endif
+                                    @endif<br>
+                                    <button type="submit" class="btn button green" style="color: green; width:150px; margin-top:8px; float:right">
+                                        Save
+                                    </button>
                             </div>
                         </div>
                         <!--Grid column-->
 
-                        
-
-                        <div class="col-md-6 form-group" style="margin-top:10px">
-                        </div>
                         <div class="col-md-6 form-group" style="margin-top:10px">
                         </div>
 
                         <div class="form-group ">
                             <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn button green" style="color: green; width:150px; ">
-                                        Save
-                                    </button>
+                                   
 
                             </div>
                         </div>

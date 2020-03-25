@@ -18,6 +18,7 @@
                 @foreach($tasks as $task)
                 {
                     title : '{{ $task->name }}',
+                    title : '{{ $task->task_description }}',
                     start : '{{ $task->task_date }}',
                     url : '{{ route('tasks.edit', $task->id) }}'
                 },

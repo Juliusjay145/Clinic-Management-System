@@ -25,6 +25,7 @@ class CreateSchedulesTable extends Migration
 
             //ari pag add og datas
             $table->string('name');
+            $table->string('task_description');
             $table->date('task_date');
             $table->timestamps();
             $table->softDeletes();
