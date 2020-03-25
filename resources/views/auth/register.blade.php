@@ -5,7 +5,7 @@
     <div class="row" >
         <div class="col-md-8 col-md-offset-2" >
             <div class="panel panel-default">
-                <div class="panel-heading bgblue"><img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 5%; height: auto;"> <b style="color: white">Clinic Management Registration Form</b></div>
+                <div class="panel-heading bgblue"><img src="{{ asset('/img/1staidkit.png')}}" alt="no logo" class="responsive" style="width: 5%; height: auto;"> <b style="color: white">Clinic Management Registration Form</b></div>
 
                     
 

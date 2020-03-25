@@ -14,23 +14,22 @@ class CreateSchedulesTable extends Migration
     public function up()
     {
        Schema::create('schedules', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('schedules_id');
             //dri dapita nagrefer cya sa id sa table na posts iyang gi rename na post_id
-            $table->integer('post_id')->unsigned();
+            $table->bigInteger('doctors_schedule_id')->unsigned();
+            $table->foreign('doctors_schedule_id')->references('id')->on('users');
             //end of the line
 
             // $table->integer('doctor_id')->unsigned();
             // $table->integer('patient_id')->unsigned();
 
             //ari pag add og datas
-            $table->string('sched_name');
-
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->string('name');
+            $table->date('task_date');
             $table->timestamps();
             $table->softDeletes();
             // ari na tawgon ang FK na gerename og post_id sa id sa table na posts
-            $table->foreign('post_id')->references('id')->on('posts');
+            
 
             // $table->foreign('doctor_id')
             //     ->references('id')

@@ -7,7 +7,7 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default" > 
             <!-- style="background-image: url('/img/login.jpg');" -->
-                <div class="panel-heading bgblue" style="border-style: black"> <b style="color: white"><img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 5%; height: auto;"> Clinic Management Login</b></div>
+                <div class="panel-heading bgblue" style="border-style: black"> <b style="color: white"><img src="{{ asset('/img/1staidkit.png')}}" alt="no logo" class="responsive" style="width: 5%; height: auto;"> Clinic Management Login</b></div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login.custom') }}">

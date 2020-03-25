@@ -42,8 +42,8 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/dashboard') }}">
-        <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 35%; height: auto;margin-left:10px">
-        <div class="sidebar-brand-text mx-3"><h5 style="margin-left:-20px"><b>Superadmin Clinic Management</b></h5></div>
+        <img src="{{ asset('/img/1staidkit.png')}}" alt="no logo" class="responsive" style="width: 30%; height: auto">
+        <div class="sidebar-brand-text mx-3"><h6><b>Superadmin Clinic Management</b></h6></div>
       </a>
 
       <!-- Divider -->
@@ -352,6 +352,7 @@
             </li>
 
           </ul>
+          
 
         </nav>
         <!-- End of Topbar -->
@@ -363,30 +364,30 @@
         <div class="container">
             @yield('content')
         </div>
+        
 
       </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
+     
       <!-- End of Footer -->
+      
 
     </div>
     <!-- End of Content Wrapper -->
+    
 
   </div>
+  
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
+
+  
 
 
   <!-- Bootstrap core JavaScript-->

@@ -30,6 +30,14 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 
+// Route::get('/tasks', function () {
+//     return view('admin.index');
+// });
+
+Route::get('/tasks', function () {
+    return view('tasks.index');
+});
+
 Route::get('/patients', function () {
     return view('patients.index');
 });
@@ -107,6 +115,10 @@ Route::group(['middleware' => 'auth'], function(){
 	})->name('dashboard');
 
 });
+ 
+
+Route::resource('tasks', 'SchedulesController');
+
 
 
 

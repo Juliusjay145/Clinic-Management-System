@@ -27,9 +27,6 @@
   <link href="{{ url('/css/bootstrap.css') }}" rel="stylesheet">
   <link href="{{ url('/css/dbuttons.css') }}" rel="stylesheet">
   <link href="{{ url('/css/bluetable.css') }}" rel="stylesheet">
-  
-
-
 
 
 </head>
@@ -44,8 +41,8 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/home') }}">
-        <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 80%; height: auto;">
-        <div class="sidebar-brand-text mx-3" style="font-size: 12px;"><h5 style="margin-left:-10px"><b>Clinic Management</b></h5></div>
+        <img src="{{ asset('/img/1staidkit.png')}}" alt="no logo" class="responsive" style="width: 30%; height: auto;">
+        <div class="sidebar-brand-text mx-3" style="font-size: 12px;"><h6><b>Clinic Management</b></h6></div>
       </a>
 
       <!-- Divider -->

@@ -98,17 +98,25 @@
                 </div>
             @endif
 
+            
             <div class="content">
                 <div class="title m-b-md text1"  style="color: white">
-                <img src="{{ asset('/img/heart.png')}}" alt="no logo" class="responsive" style="width: 15%; height: auto;margin-left:20px"> Clinic Management System
-
+                <img src="{{ asset('/img/1staidkit.png')}}" alt="no logo" class="responsive" style="width: 15%; height: auto;margin-left:20px"> Clinic Management System
+                
                 </div>
-
+                <footer style="float:bottom">
+                    <p color>Posted by: Hege Refsnes</p>
+                    <p>Contact information: <a href="Coredev.orangepayplus.com" style="color:white">
+                    coredev.ph</a></p>
+                </footer>
 
                  <!-- Indicates a successful or positive action -->
         
             </div>
+            
 
         </div>
+        
     </body>
+    
 </html>
