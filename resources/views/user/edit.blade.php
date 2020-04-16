@@ -142,7 +142,7 @@
 
                         <div class="form-group ">
                             <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn button green" style="color: green; width:150px; ">
+                                    <button onclick="myFunction()" type="submit" class="btn button green" style="color: green; width:150px; ">
                                         Save
                                     </button>
 
@@ -191,4 +191,10 @@
   <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
+
+  <script>
+function myFunction() {
+  alert("Updated Successfully");
+}
+</script>
 @endsection

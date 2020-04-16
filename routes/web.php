@@ -49,6 +49,10 @@ Route::get('/samplefolder', function () {
 
 // end of sample folder functions
 
+Route::get('/prescriptions', function () {
+    return view('prescriptions.index');
+});
+
 Route::get('/userupdates', function () {
     return view('edit');
 });
@@ -81,6 +85,7 @@ Route::get('/doctors/medicines', 'DoctorsController@medmethod');
 
 Route::get('/doctors/docdashboard', 'DoctorsController@docsmethod');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -91,6 +96,8 @@ Route::post('/login/custom', [
     ]);
 
 Route::resource('posts','PostsController');
+
+Route::resource('prescriptions','PrescriptionsController');
 
 Route::resource('doctors','DoctorsController');
 

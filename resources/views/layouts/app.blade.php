@@ -2,7 +2,7 @@
 <html lang="en">
 <html lang="{{ app()->getLocale() }}">
 
-<head>
+<head >
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
 
 </head>
 
-<body id="page-top" style="margin: -10px" >
+<body id="page-top" style="margin: -10px;" >
 
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -360,11 +360,11 @@
         <div class="container-fluid">
 
 
-        <div class="container">
-            @yield('content')
-        </div>
+          <div class="container">
+              @yield('content')
+          </div>
 
-      </div>
+        </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->

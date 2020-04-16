@@ -1,7 +1,6 @@
-@extends('layouts.superadminapp')
+@extends('layouts.app')
 @section('content')
 <style>
-
 main {
   display: flex;
   flex-direction: column;
@@ -60,11 +59,12 @@ input[type=search] {
   display: none;
 }
 </style>
- <div id="page-wrapper" class="w3-panel w3-card-4" style="background: white; border-radius:10px">
+
+ <div id="page-wrapper" class="w3-panel w3-card-4" style="background: white; border-radius:5px">
   <div class="row">
   <div class="col-sm-12">
     <div class="full-right">
-      <h2 style="margin-left: 20px">Registered Doctors</h2>
+      <h2 style="margin-left: 20px">Patients Prescriptions</h2>
     </div>
   </div>
   </div>
@@ -74,45 +74,46 @@ input[type=search] {
           <p>{{ $message }}</p>
       </div>
   @endif
-  
 <center>
 <div style="overflow-x:auto; ">
-  <table id="customers" style="margin: 10px;">
-     <thead style="border-radius:10px">
-    <tr style="color: #000000; border-radius:10px">
+  <table id="filterTable" style="margin: 10px;">
+     <thead>
+    <tr>
       <th with="80px" scope="row">No</th>
-      <th scope="col">Profile Picture</th>
-      <th scope="col">Fullname</th>
-      <th scope="col">Phone No.</th>
-      <th scope="col">Email</th>
-      <th scope="col">Address</th>
-
+      <th scope="col">Patients Profile</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">prescriptions</th>
+      <th scope="col">Prescription looks like</th>
+      <th scope="col">usage</th>
+      <th scope="col">quantity</th>
       <!-- <th>Contact Number</th> -->
       <th with="140px" class="text-center">
-        <a href="{{route('admin.create')}}" class="button green" style=" margin-bottom: 1px">
-          <i class="fas fa-plus-square" style="width: 90px;"> Add Doctor</i>
+        <a href="{{route('prescriptions.create')}}" class="button green" style=" margin-bottom: 1px">
+          <i class="fas fa-plus-square" style="width: 90px;"> Add Patient</i>
         </a>
       </th>
     </tr>
     <?php $no=1; ?>
-    @foreach ($admin as $superadmin)
+    @foreach ($prescriptions as $prescription)
       <tr>
         <td>{{$no++}}</td>
-        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $superadmin->profilepic }}" /></td>
-        <td>{{ $superadmin->name }}</td>
-        <td>{{ $superadmin->contactno }}</td>
-        <td>{{ $superadmin->email }}</td>
-        <td>{{ $superadmin->address }}</td>
-
+        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $prescription->patient->profilepic }}" /></td>   
+        <td>{{ $prescription->patient->firstname }}</td>
+        <td>{{ $prescription->patient->lastname }}</td>
+        <td>{{ $prescription->prescriptions }}</td>
+        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $prescription->profilepic }}" /></td>
+        <td>{{ $prescription->usage }}</td>
+        <td>{{ $prescription->quantity }}</td>
         <td>
-          <a class="button teal" style="width: 100px" href="{{route('admin.show',$superadmin->id)}}">
+          <a class="button teal" style="width: 100px" href="{{route('prescriptions.show',$prescription->prescription_id)}}">
               <i class="far fa-eye"> View</i>
           </a>
-          <a class="button rss" style="width: 100px;" href="{{route('admin.edit',$superadmin->id)}}">
+          <a class="button rss" style="width: 100px;" href="{{route('prescriptions.edit', $prescription->prescription_id)}}">
               <i class="fas fa-edit"> Edit</i>
           </a>
-            {!! Form::open(['method' => 'DELETE','route' => ['admin.destroy', $superadmin->id],'style'=>'display:inline']) !!}
-              <button type="submit" style="display: inline; width: 100px;" class="button btn dsgnmoo">
+            {!! Form::open(['method' => 'DELETE','route' => ['prescriptions.destroy', $prescription->prescription_id],'style'=>'display:inline']) !!}
+              <button type="submit" style="display: inline; width: 100px" class="button btn dsgnmoo">
                 <i class="fas fa-trash" style="font-size: 13px"> Delete</i>
               </button> 
             {!! Form::close() !!}
@@ -122,6 +123,7 @@ input[type=search] {
   </thead>
   </table>
   </div>
+
 </div>
 </center>
 </div>

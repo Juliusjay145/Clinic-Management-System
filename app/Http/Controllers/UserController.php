@@ -42,7 +42,6 @@ class UserController extends Controller
                 'address'=>'required',
                 'contactno'=>'required',
                 'doctortype'=>'required',
-                'address'=>'required',
                 'password'=>'required|confirmed|min:6',
 
       ]);
@@ -55,7 +54,6 @@ class UserController extends Controller
             'address'=>$request->address,
             'contactno'=>$request->contactno,
             'doctortype'=>$request->doctortype,
-            'address'=>$request->address,
             'password'=>$request->password    
             
         ]);
@@ -73,7 +71,6 @@ class UserController extends Controller
                 'address'=>'required',
                 'contactno'=>'required',
                 'doctortype'=>'required',
-                'address'=>'required',
                 'password'=>'required|confirmed|min:6',
             ]);
 
