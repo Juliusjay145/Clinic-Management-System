@@ -126,6 +126,9 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::resource('tasks', 'SchedulesController');
 
+Route::get('events', 'EventController@index')->name('events.index');
+Route::post('events', 'EventController@addEvent')->name('events.add');
+
 
 
 
