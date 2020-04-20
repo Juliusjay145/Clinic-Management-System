@@ -1,7 +1,7 @@
 @extends('layouts.noapp')
 
 @section('content')
-<body class="bgblue">
+<body>
 <div class="container cardlogin" style="margin-top: 10px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

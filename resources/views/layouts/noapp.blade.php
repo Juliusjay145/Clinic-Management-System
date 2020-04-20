@@ -28,7 +28,13 @@
 
 
 </head>
-<body class="bgblue">
+<style>
+    body{
+            background-image: url("/img/hospitalbackground.png");
+            background-color: #cccccc;
+        }
+</style>
+<body>
     <div id="app">
         
 

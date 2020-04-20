@@ -16,7 +16,7 @@
             <a href="{{ url('/patients/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient</a>
 
 
-                                                            
+                                                           
           </div>
           <!-- Content Row -->
           <div class="row">
