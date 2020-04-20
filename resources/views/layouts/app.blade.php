@@ -64,9 +64,15 @@
       </div>
 
       <li class="nav-item">
-        <a class="nav-link" href="{{ url ('/docsappointment/calendartasks') }}">
+        <a class="nav-link" href="{{ url ('/tasks/index') }}">
           <i class="fas fa-clipboard-list"></i>
           <span>Tasks</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url ('/prescriptions/index') }}">
+          <i class="fas fa-first-aid"></i>
+          <span>Add Prescriptions</span></a>
       </li>
 
       <li class="nav-item">

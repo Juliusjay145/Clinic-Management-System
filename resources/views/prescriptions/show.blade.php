@@ -15,7 +15,7 @@
 </div>
 <div class="container-fluid"><br>
           <!-- Content Row -->
-          <div class="row">
+        <div class="row">
 
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-bottom:20px; margin-top:-20px">
@@ -74,22 +74,8 @@
                             </div>
                         </div>
 
-
-
                 </div>    
-                
             </div>
-        
-
-            <!-- Border Bottom Utilities -->
-            <div class="col-lg-6">
-
-
-              
-
-            </div>
-
-          </div>
-
         </div>
+</div>
 @endsection

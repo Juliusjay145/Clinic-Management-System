@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Schedules;
 class SchedulesController extends Controller
 {
-
+    
     public function index()
     {
         $tasks = Schedules::all();

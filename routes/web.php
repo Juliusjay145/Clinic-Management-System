@@ -83,6 +83,10 @@ Route::post('/edit/user/', 'UserController@update')->name('user.update');
 
 Route::get('/doctors/medicines', 'DoctorsController@medmethod');
 
+Route::get('/tasks/index', 'SchedulesController@index');
+
+Route::get('/prescriptions/index', 'PrescriptionsController@index');
+
 Route::get('/doctors/docdashboard', 'DoctorsController@docsmethod');
 
 

@@ -40,35 +40,33 @@ button.button.green:active {
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
 
-              <div class="row">
+                <div class="row">
                   <div class="col-sm-2">
-                    {!! form::label('bosy','patient id') !!}
+                    {!! form::label('bosy','Patient ID') !!}
                   </div>
-                  <br><br><br>
-                  <div class="col-sm-10">
+                    <br><br><br>
+                    <div class="col-sm-10">
 
-                  <div class=" form-group {{ $errors->has('pat_pres_id') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('pat_pres_id',NULL, ['class'=>'form-control', 'id'=>'pat_pres_id', 'placeholder'=>'Prescription...']) }}
-                      {{ $errors->first('pat_pres_id') }}
+                    <div class="form-group {{ $errors->has('pat_pres_id') ? 'has-error' : "" }}" style="color: red; margin-top:10px; margin-bottom:-10px">
+                    <input type="text" id="pat_pres_id" name="pat_pres_id" value="1">
                     </div>
                   </div>
-
-
-                  </div>
                 </div>
+
 
                 <div class="row" >
                     <div class="col-sm-2 ">
 
-                      {!! form::label('bosy','Prescription') !!}
+                      {!! form::label('prescriptions','Prescriptions') !!}
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('prescriptions') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('prescriptions',NULL, ['class'=>'form-control', 'id'=>'prescriptions', 'placeholder'=>'Prescription...']) }}
+                      {{ Form::text('prescriptions',NULL, ['class'=>'form-control', 'id'=>'prescriptions', 'placeholder'=>'Prescriptions...']) }}
                       {{ $errors->first('prescriptions') }}
                     </div>
                   </div>
                 </div>
+
 
                 <div class="row">
                   <div class="col-sm-2"> {!!form::label('bosy','Prof') !!} </div>
@@ -98,12 +96,7 @@ button.button.green:active {
                 </div>
 
 
-            </div>
-
-            <!-- Border Bottom Utilities -->
-            <div class="col-lg-6" style="margin-top: 20px">
-
-              <div class="row">
+                <div class="row">
                 <div class="col-sm-2">
                   {!! form::label('bosy','Quantity') !!}
                 </div>
@@ -154,12 +147,20 @@ button.button.green:active {
                 </div>
               </div>
 
-              
-
-
-
 
               <button type="submit" class="button green form-control w3-right" style="margin-bottom: 20px"><i class="fas fa-save"> Save</i></button>
+
+
+            </div>
+
+            <!-- Border Bottom Utilities -->
+            <div class="col-lg-6" style="margin-top: 20px">
+
+             
+
+
+
+              
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
