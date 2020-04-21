@@ -43,7 +43,7 @@ button.button.green:active {
                 <div class="row" >
                     <div class="col-sm-2 ">
 
-                      {!! form::label('bosy','Patient ID') !!}
+                    <h6 style="font-size:12px">Patients ID</h6>
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('pat_pres_id') ? 'has-error' : "" }}" style="color: red">
@@ -57,7 +57,7 @@ button.button.green:active {
                 <div class="row" >
                     <div class="col-sm-2 ">
 
-                      {!! form::label('prescriptions','Prescriptions') !!}
+                    <h6 style="font-size:12px">Prescriptions</h6>
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('prescriptions') ? 'has-error' : "" }}" style="color: red">
@@ -69,7 +69,7 @@ button.button.green:active {
 
 
                 <div class="row">
-                  <div class="col-sm-2"> {!!form::label('bosy','Prof') !!} </div>
+                  <div class="col-sm-2"> <h6 style="font-size:12px">Medicine Picture</h6></div>
                     <div class="col-sm-10">
                       <div class="form-group {{$errors->has('profilepic') ? 'has-error' : "" }}" style="color:
                         red"> {{ $errors->first('profilepic') }} <!-- <input type="file"
@@ -84,8 +84,7 @@ button.button.green:active {
 
                 <div class="row" >
                     <div class="col-sm-2 ">
-
-                      {!! form::label('bosy','Usage') !!}
+                    <h6 style="font-size:12px">Bed No.</h6>
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('usage') ? 'has-error' : "" }}" style="color: red">
@@ -98,7 +97,7 @@ button.button.green:active {
 
                 <div class="row">
                 <div class="col-sm-2">
-                  {!! form::label('bosy','Quantity') !!}
+                <h6 style="font-size:12px">Quantity</h6>
                 </div>
                 <div class="col-sm-10">
                   <div class="form-group {{ $errors->has('quantity') ? 'has-error' : "" }}" style="color: red">
