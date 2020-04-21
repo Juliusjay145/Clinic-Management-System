@@ -1,5 +1,16 @@
 <?php
 
+
+// basic routes in my own way
+// 1. Route::get('/foldername', function () {
+//         return view('folder');
+//     });
+
+// 2. Route::get('/posts/sample', 'PostsController@postsample');
+
+// 3. Route::resource('foldername','NameController');
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +60,10 @@ Route::get('/samplefolder', function () {
 
 // end of sample folder functions
 
+Route::get('/diagnosis', function () {
+    return view('diagnosis.index');
+});
+
 Route::get('/prescriptions', function () {
     return view('prescriptions.index');
 });
@@ -87,6 +102,8 @@ Route::get('/tasks/index', 'SchedulesController@index');
 
 Route::get('/prescriptions/index', 'PrescriptionsController@index');
 
+Route::get('/diagnosis/index', 'DiagnosisController@index');
+
 Route::get('/doctors/docdashboard', 'DoctorsController@docsmethod');
 
 
@@ -108,6 +125,8 @@ Route::resource('doctors','DoctorsController');
 Route::resource('admin','LoginController');
 
 Route::resource('patients','PatientsController');
+
+Route::resource('diagnosis','DiagnosisController');
 
 Route::group(['middleware' => 'auth'], function(){
 

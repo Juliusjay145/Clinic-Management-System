@@ -76,6 +76,12 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link" href="{{ url ('/diagnosis/index') }}">
+          <i class="fas fa-ambulance"></i>
+          <span>Diagnosis</span></a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link" href="{{ url ('/docsappointment/medicines') }}">
           <i class="fas fa-pills"></i>
           <span>Medicines</span></a>

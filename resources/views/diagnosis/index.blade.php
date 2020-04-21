@@ -64,7 +64,7 @@ input[type=search] {
   <div class="row">
   <div class="col-sm-12">
     <div class="full-right">
-      <h2 style="margin-left: 20px">Patients Prescriptions</h2>
+      <h2 style="margin-left: 20px">Diagnose Patients</h2>
     </div>
   </div>
   </div>
@@ -81,42 +81,45 @@ input[type=search] {
     <tr>
       <th with="80px" scope="row">No</th>
       <th scope="col">Patients Profile</th>
-      <th scope="col">First name</th>
-      <th scope="col">Last name</th>
-      <th scope="col">prescriptions</th>
-      <th scope="col">Prescription looks like</th>
-      <th scope="col">usage</th>
-      <th scope="col">quantity</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Diagnosis ID</th>
+      <th scope="col">department</th>
+      <th scope="col">ward</th>
+      <th scope="col">bed_number</th>
+
       <!-- <th>Contact Number</th> -->
       <th with="140px" class="text-center">
-        <a href="{{route('prescriptions.create')}}" class="button green" style=" margin-bottom: 1px">
-          <i class="fas fa-plus-square" style="width: 100px;"> Add Prescriptions</i>
+        <a href="{{route('diagnosis.create')}}" class="button green" style=" margin-bottom: 1px">
+          <i class="fas fa-plus-square" style="width: 100px;"> Add Diagnosis</i>
         </a>
       </th>
     </tr>
     <?php $no=1; ?>
-    @foreach ($prescriptions as $prescription)
+    @foreach ($diagnosis as $diagnos)
       <tr>
         <td>{{$no++}}</td>
-        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $prescription->patient->profilepic }}" /></td>   
-        <td>{{ $prescription->patient->firstname }}</td>
-        <td>{{ $prescription->patient->lastname }}</td>
-        <td>{{ $prescription->prescriptions }}</td>
-        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $prescription->profilepic }}" /></td>
-        <td>{{ $prescription->usage }}</td>
-        <td>{{ $prescription->quantity }}</td>
+        <td><img style="width: auto; height: 100px; border-radius: 50%" src="data:image/jpeg;base64, {{ $diagnos->patient->profilepic }}" /></td>   
+        <td>{{ $diagnos->patient->firstname }}</td>
+        <td>{{ $diagnos->patient->lastname }}</td>
+        <td>{{ $diagnos->pat_diag_id }}</td>
+       
+        <td>{{ $diagnos->department }}</td>
+        <td>{{ $diagnos->ward }}</td>
+        <td>{{ $diagnos->bed_number }}</td>
         <td>
-          <a class="button teal" style="width: 100px" href="{{route('prescriptions.show',$prescription->prescription_id)}}">
+          <a class="button teal" style="width: 100px" href="{{route('diagnosis.show',$diagnos->diagnosis_id)}}">
               <i class="far fa-eye"> View</i>
           </a>
-          <a class="button rss" style="width: 100px;" href="{{route('prescriptions.edit', $prescription->prescription_id)}}">
+          <a class="button rss" style="width: 100px;" href="{{route('diagnosis.edit', $diagnos->diagnosis_id)}}">
               <i class="fas fa-edit"> Edit</i>
           </a>
-            {!! Form::open(['method' => 'DELETE','route' => ['prescriptions.destroy', $prescription->prescription_id],'style'=>'display:inline']) !!}
+          {!! Form::open(['method' => 'DELETE','route' => ['diagnosis.destroy', $diagnos->diagnosis_id],'style'=>'display:inline']) !!}
               <button type="submit" style="display: inline; width: 100px" class="button btn dsgnmoo">
                 <i class="fas fa-trash" style="font-size: 13px"> Delete</i>
               </button> 
             {!! Form::close() !!}
+           
         </td>
       </tr>
     @endforeach
