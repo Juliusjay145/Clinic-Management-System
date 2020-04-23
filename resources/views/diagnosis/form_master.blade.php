@@ -88,18 +88,34 @@ button.button.green:active {
               </div>
 
 
-                <div class="row" >
-                    <div class="col-sm-2 ">
 
-                    <h6 style="font-size:12px">Ward</h6>
-                    </div>
-                  <div class="col-sm-10">
-                    <div class=" form-group {{ $errors->has('ward') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('ward',NULL, ['class'=>'form-control', 'id'=>'ward', 'placeholder'=>'ward...']) }}
-                      {{ $errors->first('ward') }}
-                    </div>
+              <div class="row">
+                <div class="col-sm-2">
+                 <h6 style="font-size:12px">Ward</h6>
+                </div>
+                <br>
+              <div class="col-sm-10">
+                  <div class="form-group {{ $errors->has('ward') ? 'has-error' : "" }}" style="color: red">
+                    {{ $errors->first('ward') }}
+                      <select id="ward" name="ward" class="form-control" >
+
+                        <option id="Gynaecology" value="=Gynaecology">
+                          <b for="Gynaecology" >Maternity</b>
+                        </option>
+
+                        <option id="Medicine" value="Medicine">
+                          <b for="Medicine" >Geriatrics</b>
+                        </option>
+
+                        <option id="Paediatrics" value="Paediatrics">
+                          <b for="Paediatrics" >Psychiatric</b>
+                        </option>
+
+
+                      </select>
                   </div>
                 </div>
+              </div>
 
                 <div class="row" >
                     <div class="col-sm-2 ">
@@ -109,7 +125,7 @@ button.button.green:active {
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('bed_number') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('bed_number',NULL, ['class'=>'form-control', 'id'=>'bed_number', 'placeholder'=>'bed_number...']) }}
+                      {{ Form::text('bed_number',NULL, ['class'=>'form-control', 'id'=>'bed_number', 'placeholder'=>'Bed No.']) }}
                       {{ $errors->first('bed_number') }}
                     </div>
                   </div>
