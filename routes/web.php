@@ -64,6 +64,10 @@ Route::get('/diagnosis', function () {
     return view('diagnosis.index');
 });
 
+Route::get('/dischargepatients', function () {
+    return view('dischargepatients.index');
+});
+
 Route::get('/prescriptions', function () {
     return view('prescriptions.index');
 });
@@ -94,6 +98,7 @@ Route::get('/samplefolder/sample', 'SampleController@postsamples');
 
 Route::get('/edit/user/', 'UserController@edit')->name('user.edit');
 
+
 Route::post('/edit/user/', 'UserController@update')->name('user.update');
 
 Route::get('/doctors/medicines', 'DoctorsController@medmethod');
@@ -103,6 +108,8 @@ Route::get('/tasks/index', 'SchedulesController@index');
 Route::get('/prescriptions/index', 'PrescriptionsController@index');
 
 Route::get('/diagnosis/index', 'DiagnosisController@index');
+
+Route::get('/dischargepatients/index', 'DischargeController@index');
 
 Route::get('/doctors/docdashboard', 'DoctorsController@docsmethod');
 
@@ -119,6 +126,8 @@ Route::post('/login/custom', [
 Route::resource('posts','PostsController');
 
 Route::resource('prescriptions','PrescriptionsController');
+
+Route::resource('dischargepatients','DischargeController');
 
 Route::resource('doctors','DoctorsController');
 

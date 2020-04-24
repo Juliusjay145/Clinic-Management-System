@@ -78,13 +78,13 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ url ('/diagnosis/index') }}">
           <i class="fas fa-ambulance"></i>
-          <span>Diagnosis</span></a>
+          <span>Diagnosis/Admit Patients</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="{{ url ('/docsappointment/medicines') }}">
-          <i class="fas fa-pills"></i>
-          <span>Medicines</span></a>
+        <a class="nav-link" href="{{ url ('/dischargepatients/index') }}">
+          <i class="fas fa-wheelchair"></i>
+          <span>Discharge Patients</span></a>
       </li>
 
 
