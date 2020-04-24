@@ -32,7 +32,7 @@ button.button.green:active {
 </style>
 <div class="container-fluid" style="margin-top: 10px; border-radius:10px;">
 
- <h1 class="h3 mb-1 text-gray-900">Patient Form</h1>
+ <h1 class="h3 mb-1 text-gray-900">Update Diagnoses Patient Form</h1>
 
           <!-- Content Row -->
           <div class="row" >
@@ -40,7 +40,7 @@ button.button.green:active {
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
 
-                <div class="row" >
+                <div class="row" hidden>
                     <div class="col-sm-2 ">
 
                     <h6 style="font-size:12px">Patients ID</h6>
@@ -64,7 +64,7 @@ button.button.green:active {
                     {{ $errors->first('department') }}
                       <select id="department" name="department" class="form-control" >
 
-                        <option id="Gynaecology" value="Gynaecology">
+                        <option id="Gynaecology" value="=Gynaecology">
                           <b for="Gynaecology" >Gynaecology</b>
                         </option>
 
@@ -99,7 +99,7 @@ button.button.green:active {
                     {{ $errors->first('ward') }}
                       <select id="ward" name="ward" class="form-control" >
 
-                        <option id="Gynaecology" value="Gynaecology">
+                        <option id="Gynaecology" value="=Gynaecology">
                           <b for="Gynaecology" >Maternity</b>
                         </option>
 

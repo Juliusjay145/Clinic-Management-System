@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2 style="margin-left: 10px; margin-top:10px"> Show Patients Profile</h2>
+            <h2 style="margin-left: 10px; margin-top:10px">Patients Discharge Profile</h2>
         </div>
         <div class="pull-right">
             <br/>
@@ -64,6 +64,13 @@
                             <div class="form-group">
                                 <strong>Charges : </strong>
                                 {{ $dischargepatient->charges}}
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Date of Discharge : </strong>
+                                {{ $dischargepatient->created_at}}
                             </div>
                         </div>
 

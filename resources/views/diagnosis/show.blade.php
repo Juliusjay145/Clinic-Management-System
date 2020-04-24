@@ -24,7 +24,7 @@
 
                     <div class="card mb-4 py-3 border-bottom-success w3-right w3-panel w3-card-4" style="width: 200px; margin-left: 25px ">
                         <div class="card-body">
-                        <strong>Diagnose Patients Profile Picture: </strong>
+                        <strong>Diagnose Patient Profile Picture: </strong>
                         <center>
                             <img style="width: auto; height: 100px; margin-top: 10px; border-radius: 50%" src="data:image/jpeg;base64, {{ $diagnose->patient->profilepic }}" style="border-radius:10px"/>
                             </center>
@@ -48,7 +48,7 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>department : </strong>
+                                <strong>Department : </strong>
                                 {{ $diagnose->department}}
                             </div>
                         </div>
@@ -56,15 +56,22 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>ward : </strong>
+                                <strong>Ward : </strong>
                                 {{ $diagnose->ward}}
                             </div>
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>bed_number : </strong>
+                                <strong>Bed Number : </strong>
                                 {{ $diagnose->bed_number}}
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Date of Diagnose : </strong>
+                                {{ $diagnose->created_at}}
                             </div>
                         </div>
 

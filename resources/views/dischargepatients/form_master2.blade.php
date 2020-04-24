@@ -32,7 +32,7 @@ button.button.green:active {
 </style>
 <div class="container-fluid" style="margin-top: 10px; border-radius:10px;">
 
- <h1 class="h3 mb-1 text-gray-900">Discharge Patient Form</h1>
+ <h1 class="h3 mb-1 text-gray-900">Update Patients</h1>
 
           <!-- Content Row -->
           <div class="row" >
@@ -40,14 +40,15 @@ button.button.green:active {
             <!-- Border Left Utilities -->
             <div class="col-lg-6" style="margin-top: 20px">
 
-                <div class="row" >
-                    <div class="col-sm-2 ">
+
+                <div class="row" hidden>
+                    <div class="col-sm-2 " >
 
                     <h6 style="font-size:12px">Discharge ID</h6>
                     </div>
-                  <div class="col-sm-10">
+                  <div class="col-sm-10" >
                     <div class=" form-group {{ $errors->has('pat_discharge_id') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('pat_discharge_id',NULL, ['class'=>'form-control', 'id'=>'pat_discharge_id', 'placeholder'=>'Discharge ID...']) }}
+                      {{ Form::text('pat_discharge_id',NULL, ['class'=>'form-control', 'id'=>'pat_discharge_id', 'placeholder'=>'Discharge ID...'])}}
                       {{ $errors->first('pat_discharge_id') }}
                     </div>
                   </div>
@@ -61,7 +62,7 @@ button.button.green:active {
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('prescriptions') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('bed_days',NULL, ['class'=>'form-control', 'id'=>'bed_days', 'placeholder'=>'Number of Days in Bed...']) }}
+                      {{ Form::text('bed_days',NULL, ['class'=>'form-control', 'id'=>'bed_days', 'placeholder'=>'bed_days...']) }}
                       {{ $errors->first('bed_days') }}
                     </div>
                   </div>
@@ -74,7 +75,7 @@ button.button.green:active {
                     </div>
                   <div class="col-sm-10">
                     <div class=" form-group {{ $errors->has('charges') ? 'has-error' : "" }}" style="color: red">
-                      {{ Form::text('charges',NULL, ['class'=>'form-control', 'id'=>'charges', 'placeholder'=>'Charges...']) }}
+                      {{ Form::text('charges',NULL, ['class'=>'form-control', 'id'=>'charges', 'placeholder'=>'charges...']) }}
                       {{ $errors->first('charges') }}
                     </div>
                   </div>

@@ -4,7 +4,7 @@
 
     <div>
       {{ Form::model($prescription,['route'=>['prescriptions.update',$prescription->prescription_id],'method'=>'PATCH', 'files' => true]) }}
-      @include('prescriptions.form_master')
+      @include('prescriptions.update_form_master')
       {{ Form::close() }}
     </div>
 </div>

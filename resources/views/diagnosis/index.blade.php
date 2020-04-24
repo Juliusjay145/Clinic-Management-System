@@ -84,9 +84,9 @@ input[type=search] {
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Diagnosis ID</th>
-      <th scope="col">department</th>
-      <th scope="col">ward</th>
-      <th scope="col">bed_number</th>
+      <th scope="col">Department</th>
+      <th scope="col">Ward</th>
+      <th scope="col">Bed Number</th>
 
       <!-- <th>Contact Number</th> -->
       <th with="140px" class="text-center">
@@ -103,7 +103,6 @@ input[type=search] {
         <td>{{ $diagnos->patient->firstname }}</td>
         <td>{{ $diagnos->patient->lastname }}</td>
         <td>{{ $diagnos->pat_diag_id }}</td>
-       
         <td>{{ $diagnos->department }}</td>
         <td>{{ $diagnos->ward }}</td>
         <td>{{ $diagnos->bed_number }}</td>

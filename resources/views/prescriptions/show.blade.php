@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2 style="margin-left: 10px; margin-top:10px"> Show Patients Profile</h2>
+            <h2 style="margin-left: 10px; margin-top:10px">Patients Medicine Prescriptions Profile</h2>
         </div>
         <div class="pull-right">
             <br/>
@@ -71,6 +71,13 @@
                             <div class="form-group">
                                 <strong>Quantity : </strong>
                                 {{ $prescription->quantity}}
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                <strong>Date of Given Prescriptions : </strong>
+                                {{ $prescription->created_at}}
                             </div>
                         </div>
 
