@@ -25,7 +25,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Discharge Patients Table</h6>
+    <h6 class="m-0 font-weight-bold text-primary">Diagnose Table</h6>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -37,9 +37,8 @@
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <!-- <th scope="col">Diagnosis ID</th> -->
-      <th scope="col">Department</th>
-      <th scope="col">Ward</th>
-      <th scope="col">Bed Number</th>
+      <th scope="col">Date Diagnosed</th>
+      
 
       <!-- <th>Contact Number</th> -->
       <th scope="col">
@@ -59,9 +58,7 @@
         <td>{{ $diagnos->patient->firstname }}</td>
         <td>{{ $diagnos->patient->lastname }}</td>
         <!-- <td>{{ $diagnos->pat_diag_id }}</td> -->
-        <td>{{ $diagnos->department }}</td>
-        <td>{{ $diagnos->ward }}</td>
-        <td>{{ $diagnos->bed_number }}</td>
+        <td>{{ $diagnos->created_at }}</td>
         <td>
           <a class="btn btn-info btn-lg btn3d" style="width: 54px; height:30px" href="{{route('diagnosis.show',$diagnos->diagnosis_id)}}">
             <h6 style="margin-top:-10%">     

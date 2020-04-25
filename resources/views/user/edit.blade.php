@@ -142,8 +142,8 @@
 
                         <div class="form-group ">
                             <div class="col-md-6 col-md-offset-4">
-                                    <button onclick="myFunction()" type="submit" class="btn button green" style="color: green; width:150px; ">
-                                        Save
+                                    <button onclick="myFunction()" type="submit" class="btn btn-success btn-lg btn3d" style="color: white; width:100px; ">
+                                        <i class="fas fa-save" > Save</i>
                                     </button>
 
                             </div>

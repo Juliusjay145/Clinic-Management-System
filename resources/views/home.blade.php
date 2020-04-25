@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+Welcome Back Doctor <b style=""> {{ Auth::user()->name }}</b>
       <!-- Begin Page Content -->
         <div class="container-fluid w3-panel w3-card-4" style="border-radius:10px">
 
@@ -12,8 +12,8 @@
                         {{ session('status') }}
                     </div>
                   @endif
-                  Welcome Back Doctor<b style="margin-left:-18%">{{ Auth::user()->name }}</b>
-            <a href="{{ url('/patients/create') }}" class="button green"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient</a>
+                  
+            <a href="{{ url('/patients/create') }}" class="btn btn-success btn-lg btn3d" style="height:30px"><h6 style="margin-top:-5px"><i class="fas fa-plus fa-sm text-green-50" ></i> Add Patient </h6></a>
 
 
                                                             
@@ -21,22 +21,23 @@
           <!-- Content Row -->
           <div class="row">
 
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary w3-panel w3-card-4 h-80 py-2">
+          <div class="col-xl-3 col-md-6 mb-4">
+            <a href="#" style="text-decoration:none">
+              <div class="card border-left-primary w3-panel w3-card-4 py-2" style="height:110px">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Monthly Rates</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$20000</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                      <i class="fas fa-dollar fa-2x text-gray-300"></i>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
+            </div> 
 
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
