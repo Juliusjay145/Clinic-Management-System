@@ -36,8 +36,7 @@
           <th scope="col">Patients Profile</th>
           <th scope="col">First name</th>
           <th scope="col">Last name</th>
-          <th scope="col">Days in Bed</th>
-          <th scope="col">Charges</th>
+          <th scope="col">Date when discharge</th>
           <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -53,8 +52,7 @@
               <td>{{ $dischargepatient->patient->firstname }}</td>
               <td>{{ $dischargepatient->patient->lastname }}</td>
               
-              <td>{{ $dischargepatient->bed_days }}</td>
-              <td>{{ $dischargepatient->charges }}</td>
+              <td>{{ $dischargepatient->created_at }}</td>
               <td> 
 
                 <a class="btn btn-info btn-lg btn3d" style="width: 54px; height:30px"   href="{{route('dischargepatients.show',$dischargepatient->discharge_id)}}">

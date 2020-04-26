@@ -37,11 +37,8 @@
         <th scope="col">Patients Profile</th>
         <th scope="col">First name</th>
         <th scope="col">Last name</th>
-        <th scope="col">prescriptions</th>
-        <!-- <th scope="col">Prescription looks like</th> -->
-        <th scope="col">usage</th>
-        <!-- <th scope="col">quantity</th> -->
-        <!-- <th>Contact Number</th> -->
+        <th scope="col">Date of Prescription</th>
+        
         <th scope="col">
           Actions
         </th>
@@ -57,10 +54,8 @@
           <td><center><img style="width: auto; height: 50px; border-radius: 20%"" src="data:image/jpeg;base64, {{ $prescription->patient->profilepic }}" /></center></td>   
           <td>{{ $prescription->patient->firstname }}</td>
           <td>{{ $prescription->patient->lastname }}</td>
-          <td>{{ $prescription->prescriptions }}</td>
-          <!-- <td><img style="width: auto; height: 50px; border-radius: 20%"" src="data:image/jpeg;base64, {{ $prescription->profilepic }}" /></td> -->
-          <td>{{ $prescription->usage }}</td>
-          <!-- <td>{{ $prescription->quantity }}</td> -->
+          <td>{{ $prescription->created_at }}</td>
+          
           <td>
             <a class="btn btn-info btn-lg btn3d" style="width: 54px; height:30px" href="{{route('prescriptions.show',$prescription->prescription_id)}}">
               <h6 style="margin-top:-10%">     
